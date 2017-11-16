@@ -16,6 +16,9 @@
 		8B10CCDF1FBDF174000C0009 /* StationFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CCDE1FBDF174000C0009 /* StationFinderTests.m */; };
 		8B10CCEA1FBDF174000C0009 /* StationFinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CCE91FBDF174000C0009 /* StationFinderUITests.m */; };
 		8B10CD051FBDF1C1000C0009 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CCF91FBDF1C0000C0009 /* AppDelegate.m */; };
+		8B10CD1A1FBDF548000C0009 /* StationsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD191FBDF548000C0009 /* StationsFeedTableViewController.m */; };
+		8B10CD1F1FBDF5CD000C0009 /* GetStationsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD1E1FBDF5CD000C0009 /* GetStationsHandler.m */; };
+		8B10CD221FBE1403000C0009 /* TubeStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD211FBE1403000C0009 /* TubeStation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,12 @@
 		8B10CCF91FBDF1C0000C0009 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8B10CD081FBDF254000C0009 /* VariableUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableUtils.h; sourceTree = "<group>"; };
 		8B10CD091FBDF296000C0009 /* PCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PCH.pch; path = "StationFinder/App Utils/PCH.pch"; sourceTree = SOURCE_ROOT; };
+		8B10CD181FBDF548000C0009 /* StationsFeedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsFeedTableViewController.h; sourceTree = "<group>"; };
+		8B10CD191FBDF548000C0009 /* StationsFeedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsFeedTableViewController.m; sourceTree = "<group>"; };
+		8B10CD1D1FBDF5CD000C0009 /* GetStationsHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetStationsHandler.h; sourceTree = "<group>"; };
+		8B10CD1E1FBDF5CD000C0009 /* GetStationsHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetStationsHandler.m; sourceTree = "<group>"; };
+		8B10CD201FBE1403000C0009 /* TubeStation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TubeStation.h; sourceTree = "<group>"; };
+		8B10CD211FBE1403000C0009 /* TubeStation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TubeStation.m; sourceTree = "<group>"; };
 		99808431CB05C46A30FA392D /* Pods-StationFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.release.xcconfig"; sourceTree = "<group>"; };
 		C5668A3D7CB7AF75C22E16FE /* Pods-StationFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,11 +136,11 @@
 		8B10CCC41FBDF174000C0009 /* StationFinder */ = {
 			isa = PBXGroup;
 			children = (
-				8B10CCD31FBDF174000C0009 /* Info.plist */,
-				8B10CD071FBDF254000C0009 /* App Utils */,
 				8B10CCFA1FBDF1C0000C0009 /* App */,
 				8B10CCF71FBDF1C0000C0009 /* App Delegate */,
+				8B10CD071FBDF254000C0009 /* App Utils */,
 				8B10CCCE1FBDF174000C0009 /* Assets.xcassets */,
+				8B10CCD31FBDF174000C0009 /* Info.plist */,
 				8B10CD061FBDF1D5000C0009 /* Supporting Files */,
 				8B10CCC81FBDF174000C0009 /* ViewController.h */,
 				8B10CCC91FBDF174000C0009 /* ViewController.m */,
@@ -169,90 +178,13 @@
 		8B10CCFA1FBDF1C0000C0009 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8B10CD0A1FBDF4FA000C0009 /* Stations  */,
 				8B10CCCB1FBDF174000C0009 /* Main.storyboard */,
 				8B10CCD01FBDF174000C0009 /* LaunchScreen.storyboard */,
-				8B10CCFB1FBDF1C0000C0009 /* Station Detail */,
-				8B10CCFF1FBDF1C0000C0009 /* Station Facilities Detail */,
-				8B10CD001FBDF1C0000C0009 /* Stations Feed */,
+				8B10CD201FBE1403000C0009 /* TubeStation.h */,
+				8B10CD211FBE1403000C0009 /* TubeStation.m */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		8B10CCFB1FBDF1C0000C0009 /* Station Detail */ = {
-			isa = PBXGroup;
-			children = (
-				8B10CCFC1FBDF1C0000C0009 /* Controllers */,
-				8B10CCFD1FBDF1C0000C0009 /* Helpers */,
-				8B10CCFE1FBDF1C0000C0009 /* Models */,
-			);
-			path = "Station Detail";
-			sourceTree = "<group>";
-		};
-		8B10CCFC1FBDF1C0000C0009 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		8B10CCFD1FBDF1C0000C0009 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		8B10CCFE1FBDF1C0000C0009 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		8B10CCFF1FBDF1C0000C0009 /* Station Facilities Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Station Facilities Detail";
-			sourceTree = "<group>";
-		};
-		8B10CD001FBDF1C0000C0009 /* Stations Feed */ = {
-			isa = PBXGroup;
-			children = (
-				8B10CD011FBDF1C0000C0009 /* Controllers */,
-				8B10CD021FBDF1C0000C0009 /* Helpers */,
-				8B10CD031FBDF1C0000C0009 /* Models */,
-				8B10CD041FBDF1C0000C0009 /* Views */,
-			);
-			path = "Stations Feed";
-			sourceTree = "<group>";
-		};
-		8B10CD011FBDF1C0000C0009 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		8B10CD021FBDF1C0000C0009 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		8B10CD031FBDF1C0000C0009 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		8B10CD041FBDF1C0000C0009 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		8B10CD061FBDF1D5000C0009 /* Supporting Files */ = {
@@ -270,6 +202,113 @@
 				8B10CD081FBDF254000C0009 /* VariableUtils.h */,
 			);
 			path = "App Utils";
+			sourceTree = "<group>";
+		};
+		8B10CD0A1FBDF4FA000C0009 /* Stations  */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD0B1FBDF4FA000C0009 /* 1. Stations Feed */,
+				8B10CD101FBDF4FA000C0009 /* 2. Station Detail */,
+				8B10CD141FBDF4FA000C0009 /* 3. Station Facilities Detail */,
+			);
+			path = "Stations ";
+			sourceTree = "<group>";
+		};
+		8B10CD0B1FBDF4FA000C0009 /* 1. Stations Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD0C1FBDF4FA000C0009 /* Controllers */,
+				8B10CD0D1FBDF4FA000C0009 /* Helpers */,
+				8B10CD0E1FBDF4FA000C0009 /* Models */,
+				8B10CD0F1FBDF4FA000C0009 /* Views */,
+			);
+			path = "1. Stations Feed";
+			sourceTree = "<group>";
+		};
+		8B10CD0C1FBDF4FA000C0009 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD181FBDF548000C0009 /* StationsFeedTableViewController.h */,
+				8B10CD191FBDF548000C0009 /* StationsFeedTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B10CD0D1FBDF4FA000C0009 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8B10CD0E1FBDF4FA000C0009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD1C1FBDF5BC000C0009 /* Get Stations Handler */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B10CD0F1FBDF4FA000C0009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD1B1FBDF586000C0009 /* Stations Feed Table View Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B10CD101FBDF4FA000C0009 /* 2. Station Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD111FBDF4FA000C0009 /* Controllers */,
+				8B10CD121FBDF4FA000C0009 /* Helpers */,
+				8B10CD131FBDF4FA000C0009 /* Models */,
+			);
+			path = "2. Station Detail";
+			sourceTree = "<group>";
+		};
+		8B10CD111FBDF4FA000C0009 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B10CD121FBDF4FA000C0009 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8B10CD131FBDF4FA000C0009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B10CD141FBDF4FA000C0009 /* 3. Station Facilities Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "3. Station Facilities Detail";
+			sourceTree = "<group>";
+		};
+		8B10CD1B1FBDF586000C0009 /* Stations Feed Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Stations Feed Table View Cell";
+			sourceTree = "<group>";
+		};
+		8B10CD1C1FBDF5BC000C0009 /* Get Stations Handler */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD1D1FBDF5CD000C0009 /* GetStationsHandler.h */,
+				8B10CD1E1FBDF5CD000C0009 /* GetStationsHandler.m */,
+			);
+			path = "Get Stations Handler";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,7 +509,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B10CD1A1FBDF548000C0009 /* StationsFeedTableViewController.m in Sources */,
 				8B10CD051FBDF1C1000C0009 /* AppDelegate.m in Sources */,
+				8B10CD221FBE1403000C0009 /* TubeStation.m in Sources */,
+				8B10CD1F1FBDF5CD000C0009 /* GetStationsHandler.m in Sources */,
 				8B10CCCA1FBDF174000C0009 /* ViewController.m in Sources */,
 				8B10CCD51FBDF174000C0009 /* main.m in Sources */,
 			);
