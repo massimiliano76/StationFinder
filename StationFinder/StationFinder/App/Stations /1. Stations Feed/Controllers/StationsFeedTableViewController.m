@@ -8,14 +8,19 @@
 
 #import "StationsFeedTableViewController.h"
 
+#import "LocationHandler.h"
 #import "GetStationsHandler.h"
 
-@interface StationsFeedTableViewController () <GetStationsHandlerDelegate>
+@interface StationsFeedTableViewController () <LocationHandlerDelegate, GetStationsHandlerDelegate>
 {
     NSInteger searchRadius;
 }
 
 @property (nonatomic, strong) GetStationsHandler *stationsHandler;
+
+@property (nonatomic, strong) LocationHandler *locationHandler;
+
+@property (nonatomic, strong) NSMutableArray *stations;
 
 @end
 
@@ -26,13 +31,22 @@
     [super viewDidLoad];
     
     [self setupVariables];
-    
-    [self getNearbyStations];
+
+    [self collectDataForView];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Setup Core View Variables
+
+- (void)setupVariables
+{
+    searchRadius = 500; // meters
+    
+    [self initHandlers];
 }
 
 - (void)initHandlers
@@ -43,47 +57,60 @@
         
         self.stationsHandler.delegate = self;
     }
+    
+    if (!self.locationHandler) {
+        
+        self.locationHandler = [[LocationHandler alloc] init];
+        
+        self.locationHandler.delegate = self;
+    }
 }
 
-- (void)setupVariables
+#pragma mark - Collect Data For View
+
+/**
+ Method collectDataForView
+ 
+ This method begins the process of collecting the location and nearby stations. The process works like so ..
+ 
+ 1. Start collecting with locationHandler (done in this method) if you can, location will be returned in delegate method 'returnLocationFromLocationHandler' ... otherwise default location from locationHandler
+ 2. On success location data will be used to collect nearby stations using method 'getNearbyStationsWithUsersLocation'
+ 3. Stations will be used to populate the table view
+ */
+- (void)collectDataForView
 {
-    searchRadius = 500; // meters
+    if ([CLLocationManager locationServicesEnabled]){
+        
+        [self.locationHandler beingCollectingUsersLocation];
     
-    [self initHandlers];
+    }else{
+        
+        [self.locationHandler.locationManager requestWhenInUseAuthorization];
+        
+        [self getNearbyStationsWithUsersLocation:[self.locationHandler getHandlerDefaultLocation]];
+    }
 }
 
 #pragma mark - Get Stations
 
-- (void)getNearbyStations
+- (void)getNearbyStationsWithUsersLocation:(CLLocation*)location;
 {
-    // 1. Get the users location
+    NSString *latitude  = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
     
-    NSDictionary *locationInfo = [self getUsersLocation];
-
-    // 2. Get the location
+    NSString *longitude = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
     
-    [self getStationsWithLocationAndRadius:searchRadius latitude:locationInfo[@"latitude"] longitude:locationInfo[@"longitude"]];
-}
-
-- (NSDictionary*)getUsersLocation
-{
-    // 1. Get the users location
-    
-    // 2. Check if they are in london
-    
-    // 3. Set/Adjust the location as appropriate
-    
-    NSDictionary *location = @{@"longitude" : @"-0.0856340",
-                               @"latitude"  : @"51.5226620"};
-    return location;
-}
-
-- (void)getStationsWithLocationAndRadius:(NSInteger)radius latitude:(NSString*)latitude longitude:(NSString*)longitude
-{
     if (([longitude length] & [latitude length]) > 0) {
- 
-        [self.stationsHandler getNearbyTubeStationsWithLocationInfo:radius latitude:latitude longitude:longitude];
+        
+        [self.stationsHandler getNearbyTubeStationsWithLocationInfo:searchRadius latitude:latitude longitude:longitude];
     }
+}
+
+#pragma mark - Location Handler Delegate Methods
+
+- (void)returnLocationFromLocationHandler:(LocationHandler*)handler
+                                 location:(CLLocation*)location;
+{
+    [self getNearbyStationsWithUsersLocation:location];
 }
 
 #pragma mark - Station Handler Delegate Methods
@@ -91,7 +118,9 @@
 - (void)returnStationsFromHandler:(GetStationsHandler*)handler
                          stations:(NSMutableArray*)stations
 {
+    self.stations = stations;
     
+    // [self.tableView reloadData];
 }
 
 - (void)returnErrorFromStationsFromHandler:(GetStationsHandler*)handler
@@ -124,12 +153,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.stations count];
 }
 
 /*

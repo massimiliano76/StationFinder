@@ -66,6 +66,8 @@
     }];
 }
 
+#pragma mark - Supporting Methods
+
 - (NSMutableArray*)createTubeStationsArray:(NSArray*)results
 {
     NSMutableArray *stationsArray = [[NSMutableArray alloc] init];
@@ -79,6 +81,20 @@
     
     return stationsArray;
 }
+
+- (NSString *)createErrorMessageWithError:(NSError*)error
+{
+    NSString *errorMessage = @"Error";
+    
+    if (error) {
+        
+        errorMessage = [NSString stringWithFormat:@"Error: %@", error];
+    }
+    
+    return errorMessage;
+}
+
+#pragma mark - Station Handler Delegate Method Calls
 
 - (void)returnStationsToCaller:(NSMutableArray*)stations
 {
@@ -98,18 +114,6 @@
         
         [strongDelegate returnErrorFromStationsFromHandler:self errorMessage:errorMessage];
     }
-}
-
-- (NSString *)createErrorMessageWithError:(NSError*)error
-{
-    NSString *errorMessage = @"Error";
- 
-    if (error) {
-        
-        errorMessage = [NSString stringWithFormat:@"Error: %@", error];
-    }
-    
-    return errorMessage;
 }
 
 @end

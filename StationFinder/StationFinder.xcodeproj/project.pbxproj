@@ -19,6 +19,8 @@
 		8B10CD1A1FBDF548000C0009 /* StationsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD191FBDF548000C0009 /* StationsFeedTableViewController.m */; };
 		8B10CD1F1FBDF5CD000C0009 /* GetStationsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD1E1FBDF5CD000C0009 /* GetStationsHandler.m */; };
 		8B10CD221FBE1403000C0009 /* TubeStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD211FBE1403000C0009 /* TubeStation.m */; };
+		8B10CD291FBE3EB1000C0009 /* LocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD281FBE3EB1000C0009 /* LocationHandler.m */; };
+		8B10CD2B1FBE4B79000C0009 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B10CD2A1FBE4B79000C0009 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,9 @@
 		8B10CD201FBE1403000C0009 /* TubeStation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TubeStation.h; sourceTree = "<group>"; };
 		8B10CD211FBE1403000C0009 /* TubeStation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TubeStation.m; sourceTree = "<group>"; };
 		8B10CD231FBE2266000C0009 /* TFLVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFLVariables.h; sourceTree = "<group>"; };
+		8B10CD271FBE3EB1000C0009 /* LocationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationHandler.h; sourceTree = "<group>"; };
+		8B10CD281FBE3EB1000C0009 /* LocationHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationHandler.m; sourceTree = "<group>"; };
+		8B10CD2A1FBE4B79000C0009 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		99808431CB05C46A30FA392D /* Pods-StationFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.release.xcconfig"; sourceTree = "<group>"; };
 		C5668A3D7CB7AF75C22E16FE /* Pods-StationFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B10CD2B1FBE4B79000C0009 /* MapKit.framework in Frameworks */,
 				6F93C2AA20FFDB019B82ADF8 /* Pods_StationFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +113,7 @@
 		89843DEF120735DD799E704E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B10CD2A1FBE4B79000C0009 /* MapKit.framework */,
 				4A6E0658AA0EB61124725BDC /* Pods_StationFinder.framework */,
 			);
 			name = Frameworks;
@@ -246,6 +253,7 @@
 		8B10CD0E1FBDF4FA000C0009 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8B10CD261FBE3EA8000C0009 /* Location Handler */,
 				8B10CD1C1FBDF5BC000C0009 /* Get Stations Handler */,
 			);
 			path = Models;
@@ -311,6 +319,15 @@
 				8B10CD1E1FBDF5CD000C0009 /* GetStationsHandler.m */,
 			);
 			path = "Get Stations Handler";
+			sourceTree = "<group>";
+		};
+		8B10CD261FBE3EA8000C0009 /* Location Handler */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD271FBE3EB1000C0009 /* LocationHandler.h */,
+				8B10CD281FBE3EB1000C0009 /* LocationHandler.m */,
+			);
+			path = "Location Handler";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +401,14 @@
 					8B10CCC11FBDF174000C0009 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8B10CCD91FBDF174000C0009 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -513,6 +538,7 @@
 			files = (
 				8B10CD1A1FBDF548000C0009 /* StationsFeedTableViewController.m in Sources */,
 				8B10CD051FBDF1C1000C0009 /* AppDelegate.m in Sources */,
+				8B10CD291FBE3EB1000C0009 /* LocationHandler.m in Sources */,
 				8B10CD221FBE1403000C0009 /* TubeStation.m in Sources */,
 				8B10CD1F1FBDF5CD000C0009 /* GetStationsHandler.m in Sources */,
 				8B10CCCA1FBDF174000C0009 /* ViewController.m in Sources */,
