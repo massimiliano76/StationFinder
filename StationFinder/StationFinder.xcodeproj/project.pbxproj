@@ -7,69 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B10CC781FBDEFF2000C0009 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CC771FBDEFF2000C0009 /* AppDelegate.m */; };
-		8B10CC7B1FBDEFF2000C0009 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CC7A1FBDEFF2000C0009 /* ViewController.m */; };
-		8B10CC7E1FBDEFF2000C0009 /* StationFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CC7C1FBDEFF2000C0009 /* StationFinder.xcdatamodeld */; };
-		8B10CC801FBDEFF2000C0009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B10CC7F1FBDEFF2000C0009 /* Assets.xcassets */; };
-		8B10CC831FBDEFF2000C0009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B10CC811FBDEFF2000C0009 /* Main.storyboard */; };
-		8B10CC861FBDEFF2000C0009 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CC851FBDEFF2000C0009 /* main.m */; };
-		8B10CC911FBDEFF3000C0009 /* StationFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CC901FBDEFF3000C0009 /* StationFinderTests.m */; };
-		8B10CC9C1FBDEFF3000C0009 /* StationFinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CC9B1FBDEFF3000C0009 /* StationFinderUITests.m */; };
+		6F93C2AA20FFDB019B82ADF8 /* Pods_StationFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6E0658AA0EB61124725BDC /* Pods_StationFinder.framework */; };
+		8B10CCCA1FBDF174000C0009 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CCC91FBDF174000C0009 /* ViewController.m */; };
+		8B10CCCD1FBDF174000C0009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B10CCCB1FBDF174000C0009 /* Main.storyboard */; };
+		8B10CCCF1FBDF174000C0009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B10CCCE1FBDF174000C0009 /* Assets.xcassets */; };
+		8B10CCD21FBDF174000C0009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B10CCD01FBDF174000C0009 /* LaunchScreen.storyboard */; };
+		8B10CCD51FBDF174000C0009 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CCD41FBDF174000C0009 /* main.m */; };
+		8B10CCDF1FBDF174000C0009 /* StationFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CCDE1FBDF174000C0009 /* StationFinderTests.m */; };
+		8B10CCEA1FBDF174000C0009 /* StationFinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CCE91FBDF174000C0009 /* StationFinderUITests.m */; };
+		8B10CD051FBDF1C1000C0009 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CCF91FBDF1C0000C0009 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8B10CC8D1FBDEFF3000C0009 /* PBXContainerItemProxy */ = {
+		8B10CCDB1FBDF174000C0009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8B10CC6B1FBDEFF2000C0009 /* Project object */;
+			containerPortal = 8B10CCBA1FBDF174000C0009 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8B10CC721FBDEFF2000C0009;
+			remoteGlobalIDString = 8B10CCC11FBDF174000C0009;
 			remoteInfo = StationFinder;
 		};
-		8B10CC981FBDEFF3000C0009 /* PBXContainerItemProxy */ = {
+		8B10CCE61FBDF174000C0009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8B10CC6B1FBDEFF2000C0009 /* Project object */;
+			containerPortal = 8B10CCBA1FBDF174000C0009 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8B10CC721FBDEFF2000C0009;
+			remoteGlobalIDString = 8B10CCC11FBDF174000C0009;
 			remoteInfo = StationFinder;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B10CC731FBDEFF2000C0009 /* StationFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StationFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B10CC761FBDEFF2000C0009 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8B10CC771FBDEFF2000C0009 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8B10CC791FBDEFF2000C0009 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8B10CC7A1FBDEFF2000C0009 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8B10CC7D1FBDEFF2000C0009 /* StationFinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StationFinder.xcdatamodel; sourceTree = "<group>"; };
-		8B10CC7F1FBDEFF2000C0009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8B10CC821FBDEFF2000C0009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B10CC841FBDEFF2000C0009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B10CC851FBDEFF2000C0009 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8B10CC871FBDEFF2000C0009 /* StationFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StationFinder.entitlements; sourceTree = "<group>"; };
-		8B10CC8C1FBDEFF3000C0009 /* StationFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StationFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B10CC901FBDEFF3000C0009 /* StationFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationFinderTests.m; sourceTree = "<group>"; };
-		8B10CC921FBDEFF3000C0009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B10CC971FBDEFF3000C0009 /* StationFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StationFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B10CC9B1FBDEFF3000C0009 /* StationFinderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationFinderUITests.m; sourceTree = "<group>"; };
-		8B10CC9D1FBDEFF3000C0009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A6E0658AA0EB61124725BDC /* Pods_StationFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StationFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B10CCC21FBDF174000C0009 /* StationFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StationFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B10CCC81FBDF174000C0009 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8B10CCC91FBDF174000C0009 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B10CCCC1FBDF174000C0009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B10CCCE1FBDF174000C0009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B10CCD11FBDF174000C0009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B10CCD31FBDF174000C0009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B10CCD41FBDF174000C0009 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B10CCDA1FBDF174000C0009 /* StationFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StationFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B10CCDE1FBDF174000C0009 /* StationFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationFinderTests.m; sourceTree = "<group>"; };
+		8B10CCE01FBDF174000C0009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B10CCE51FBDF174000C0009 /* StationFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StationFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B10CCE91FBDF174000C0009 /* StationFinderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationFinderUITests.m; sourceTree = "<group>"; };
+		8B10CCEB1FBDF174000C0009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B10CCF81FBDF1C0000C0009 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B10CCF91FBDF1C0000C0009 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B10CD081FBDF254000C0009 /* VariableUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableUtils.h; sourceTree = "<group>"; };
+		8B10CD091FBDF296000C0009 /* PCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PCH.pch; path = "StationFinder/App Utils/PCH.pch"; sourceTree = SOURCE_ROOT; };
+		99808431CB05C46A30FA392D /* Pods-StationFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.release.xcconfig"; sourceTree = "<group>"; };
+		C5668A3D7CB7AF75C22E16FE /* Pods-StationFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8B10CC701FBDEFF2000C0009 /* Frameworks */ = {
+		8B10CCBF1FBDF174000C0009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F93C2AA20FFDB019B82ADF8 /* Pods_StationFinder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B10CCD71FBDF174000C0009 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B10CC891FBDEFF3000C0009 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B10CC941FBDEFF3000C0009 /* Frameworks */ = {
+		8B10CCE21FBDF174000C0009 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,71 +85,206 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8B10CC6A1FBDEFF2000C0009 = {
+		2262D93986F75A0A519AD53A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8B10CC751FBDEFF2000C0009 /* StationFinder */,
-				8B10CC8F1FBDEFF3000C0009 /* StationFinderTests */,
-				8B10CC9A1FBDEFF3000C0009 /* StationFinderUITests */,
-				8B10CC741FBDEFF2000C0009 /* Products */,
+				C5668A3D7CB7AF75C22E16FE /* Pods-StationFinder.debug.xcconfig */,
+				99808431CB05C46A30FA392D /* Pods-StationFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		89843DEF120735DD799E704E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A6E0658AA0EB61124725BDC /* Pods_StationFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B10CCB91FBDF174000C0009 = {
+			isa = PBXGroup;
+			children = (
+				8B10CCC41FBDF174000C0009 /* StationFinder */,
+				8B10CCDD1FBDF174000C0009 /* StationFinderTests */,
+				8B10CCE81FBDF174000C0009 /* StationFinderUITests */,
+				8B10CCC31FBDF174000C0009 /* Products */,
+				2262D93986F75A0A519AD53A /* Pods */,
+				89843DEF120735DD799E704E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		8B10CC741FBDEFF2000C0009 /* Products */ = {
+		8B10CCC31FBDF174000C0009 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B10CC731FBDEFF2000C0009 /* StationFinder.app */,
-				8B10CC8C1FBDEFF3000C0009 /* StationFinderTests.xctest */,
-				8B10CC971FBDEFF3000C0009 /* StationFinderUITests.xctest */,
+				8B10CCC21FBDF174000C0009 /* StationFinder.app */,
+				8B10CCDA1FBDF174000C0009 /* StationFinderTests.xctest */,
+				8B10CCE51FBDF174000C0009 /* StationFinderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B10CC751FBDEFF2000C0009 /* StationFinder */ = {
+		8B10CCC41FBDF174000C0009 /* StationFinder */ = {
 			isa = PBXGroup;
 			children = (
-				8B10CC761FBDEFF2000C0009 /* AppDelegate.h */,
-				8B10CC771FBDEFF2000C0009 /* AppDelegate.m */,
-				8B10CC791FBDEFF2000C0009 /* ViewController.h */,
-				8B10CC7A1FBDEFF2000C0009 /* ViewController.m */,
-				8B10CC7F1FBDEFF2000C0009 /* Assets.xcassets */,
-				8B10CC811FBDEFF2000C0009 /* Main.storyboard */,
-				8B10CC841FBDEFF2000C0009 /* Info.plist */,
-				8B10CC851FBDEFF2000C0009 /* main.m */,
-				8B10CC871FBDEFF2000C0009 /* StationFinder.entitlements */,
-				8B10CC7C1FBDEFF2000C0009 /* StationFinder.xcdatamodeld */,
+				8B10CCD31FBDF174000C0009 /* Info.plist */,
+				8B10CD071FBDF254000C0009 /* App Utils */,
+				8B10CCFA1FBDF1C0000C0009 /* App */,
+				8B10CCF71FBDF1C0000C0009 /* App Delegate */,
+				8B10CCCE1FBDF174000C0009 /* Assets.xcassets */,
+				8B10CD061FBDF1D5000C0009 /* Supporting Files */,
+				8B10CCC81FBDF174000C0009 /* ViewController.h */,
+				8B10CCC91FBDF174000C0009 /* ViewController.m */,
 			);
 			path = StationFinder;
 			sourceTree = "<group>";
 		};
-		8B10CC8F1FBDEFF3000C0009 /* StationFinderTests */ = {
+		8B10CCDD1FBDF174000C0009 /* StationFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				8B10CC901FBDEFF3000C0009 /* StationFinderTests.m */,
-				8B10CC921FBDEFF3000C0009 /* Info.plist */,
+				8B10CCDE1FBDF174000C0009 /* StationFinderTests.m */,
+				8B10CCE01FBDF174000C0009 /* Info.plist */,
 			);
 			path = StationFinderTests;
 			sourceTree = "<group>";
 		};
-		8B10CC9A1FBDEFF3000C0009 /* StationFinderUITests */ = {
+		8B10CCE81FBDF174000C0009 /* StationFinderUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8B10CC9B1FBDEFF3000C0009 /* StationFinderUITests.m */,
-				8B10CC9D1FBDEFF3000C0009 /* Info.plist */,
+				8B10CCE91FBDF174000C0009 /* StationFinderUITests.m */,
+				8B10CCEB1FBDF174000C0009 /* Info.plist */,
 			);
 			path = StationFinderUITests;
+			sourceTree = "<group>";
+		};
+		8B10CCF71FBDF1C0000C0009 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CCF81FBDF1C0000C0009 /* AppDelegate.h */,
+				8B10CCF91FBDF1C0000C0009 /* AppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		8B10CCFA1FBDF1C0000C0009 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CCCB1FBDF174000C0009 /* Main.storyboard */,
+				8B10CCD01FBDF174000C0009 /* LaunchScreen.storyboard */,
+				8B10CCFB1FBDF1C0000C0009 /* Station Detail */,
+				8B10CCFF1FBDF1C0000C0009 /* Station Facilities Detail */,
+				8B10CD001FBDF1C0000C0009 /* Stations Feed */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8B10CCFB1FBDF1C0000C0009 /* Station Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CCFC1FBDF1C0000C0009 /* Controllers */,
+				8B10CCFD1FBDF1C0000C0009 /* Helpers */,
+				8B10CCFE1FBDF1C0000C0009 /* Models */,
+			);
+			path = "Station Detail";
+			sourceTree = "<group>";
+		};
+		8B10CCFC1FBDF1C0000C0009 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B10CCFD1FBDF1C0000C0009 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8B10CCFE1FBDF1C0000C0009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B10CCFF1FBDF1C0000C0009 /* Station Facilities Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Station Facilities Detail";
+			sourceTree = "<group>";
+		};
+		8B10CD001FBDF1C0000C0009 /* Stations Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD011FBDF1C0000C0009 /* Controllers */,
+				8B10CD021FBDF1C0000C0009 /* Helpers */,
+				8B10CD031FBDF1C0000C0009 /* Models */,
+				8B10CD041FBDF1C0000C0009 /* Views */,
+			);
+			path = "Stations Feed";
+			sourceTree = "<group>";
+		};
+		8B10CD011FBDF1C0000C0009 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B10CD021FBDF1C0000C0009 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8B10CD031FBDF1C0000C0009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B10CD041FBDF1C0000C0009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B10CD061FBDF1D5000C0009 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CCD41FBDF174000C0009 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B10CD071FBDF254000C0009 /* App Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD091FBDF296000C0009 /* PCH.pch */,
+				8B10CD081FBDF254000C0009 /* VariableUtils.h */,
+			);
+			path = "App Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B10CC721FBDEFF2000C0009 /* StationFinder */ = {
+		8B10CCC11FBDF174000C0009 /* StationFinder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B10CCA01FBDEFF3000C0009 /* Build configuration list for PBXNativeTarget "StationFinder" */;
+			buildConfigurationList = 8B10CCEE1FBDF174000C0009 /* Build configuration list for PBXNativeTarget "StationFinder" */;
 			buildPhases = (
-				8B10CC6F1FBDEFF2000C0009 /* Sources */,
-				8B10CC701FBDEFF2000C0009 /* Frameworks */,
-				8B10CC711FBDEFF2000C0009 /* Resources */,
+				B2DCE2ED1A1294ED4549F663 /* [CP] Check Pods Manifest.lock */,
+				8B10CCBE1FBDF174000C0009 /* Sources */,
+				8B10CCBF1FBDF174000C0009 /* Frameworks */,
+				8B10CCC01FBDF174000C0009 /* Resources */,
+				BC3EA9E8230940BFB6D3CB59 /* [CP] Embed Pods Frameworks */,
+				1D4D6B59C183742CD01ED52D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,71 +292,71 @@
 			);
 			name = StationFinder;
 			productName = StationFinder;
-			productReference = 8B10CC731FBDEFF2000C0009 /* StationFinder.app */;
+			productReference = 8B10CCC21FBDF174000C0009 /* StationFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B10CC8B1FBDEFF3000C0009 /* StationFinderTests */ = {
+		8B10CCD91FBDF174000C0009 /* StationFinderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B10CCA31FBDEFF3000C0009 /* Build configuration list for PBXNativeTarget "StationFinderTests" */;
+			buildConfigurationList = 8B10CCF11FBDF174000C0009 /* Build configuration list for PBXNativeTarget "StationFinderTests" */;
 			buildPhases = (
-				8B10CC881FBDEFF3000C0009 /* Sources */,
-				8B10CC891FBDEFF3000C0009 /* Frameworks */,
-				8B10CC8A1FBDEFF3000C0009 /* Resources */,
+				8B10CCD61FBDF174000C0009 /* Sources */,
+				8B10CCD71FBDF174000C0009 /* Frameworks */,
+				8B10CCD81FBDF174000C0009 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8B10CC8E1FBDEFF3000C0009 /* PBXTargetDependency */,
+				8B10CCDC1FBDF174000C0009 /* PBXTargetDependency */,
 			);
 			name = StationFinderTests;
 			productName = StationFinderTests;
-			productReference = 8B10CC8C1FBDEFF3000C0009 /* StationFinderTests.xctest */;
+			productReference = 8B10CCDA1FBDF174000C0009 /* StationFinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8B10CC961FBDEFF3000C0009 /* StationFinderUITests */ = {
+		8B10CCE41FBDF174000C0009 /* StationFinderUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B10CCA61FBDEFF3000C0009 /* Build configuration list for PBXNativeTarget "StationFinderUITests" */;
+			buildConfigurationList = 8B10CCF41FBDF174000C0009 /* Build configuration list for PBXNativeTarget "StationFinderUITests" */;
 			buildPhases = (
-				8B10CC931FBDEFF3000C0009 /* Sources */,
-				8B10CC941FBDEFF3000C0009 /* Frameworks */,
-				8B10CC951FBDEFF3000C0009 /* Resources */,
+				8B10CCE11FBDF174000C0009 /* Sources */,
+				8B10CCE21FBDF174000C0009 /* Frameworks */,
+				8B10CCE31FBDF174000C0009 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8B10CC991FBDEFF3000C0009 /* PBXTargetDependency */,
+				8B10CCE71FBDF174000C0009 /* PBXTargetDependency */,
 			);
 			name = StationFinderUITests;
 			productName = StationFinderUITests;
-			productReference = 8B10CC971FBDEFF3000C0009 /* StationFinderUITests.xctest */;
+			productReference = 8B10CCE51FBDF174000C0009 /* StationFinderUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8B10CC6B1FBDEFF2000C0009 /* Project object */ = {
+		8B10CCBA1FBDF174000C0009 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = SuperAwesomeInc;
 				TargetAttributes = {
-					8B10CC721FBDEFF2000C0009 = {
+					8B10CCC11FBDF174000C0009 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
 					};
-					8B10CC8B1FBDEFF3000C0009 = {
+					8B10CCD91FBDF174000C0009 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 8B10CC721FBDEFF2000C0009;
+						TestTargetID = 8B10CCC11FBDF174000C0009;
 					};
-					8B10CC961FBDEFF3000C0009 = {
+					8B10CCE41FBDF174000C0009 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 8B10CC721FBDEFF2000C0009;
+						TestTargetID = 8B10CCC11FBDF174000C0009;
 					};
 				};
 			};
-			buildConfigurationList = 8B10CC6E1FBDEFF2000C0009 /* Build configuration list for PBXProject "StationFinder" */;
+			buildConfigurationList = 8B10CCBD1FBDF174000C0009 /* Build configuration list for PBXProject "StationFinder" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,36 +364,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 8B10CC6A1FBDEFF2000C0009;
-			productRefGroup = 8B10CC741FBDEFF2000C0009 /* Products */;
+			mainGroup = 8B10CCB91FBDF174000C0009;
+			productRefGroup = 8B10CCC31FBDF174000C0009 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B10CC721FBDEFF2000C0009 /* StationFinder */,
-				8B10CC8B1FBDEFF3000C0009 /* StationFinderTests */,
-				8B10CC961FBDEFF3000C0009 /* StationFinderUITests */,
+				8B10CCC11FBDF174000C0009 /* StationFinder */,
+				8B10CCD91FBDF174000C0009 /* StationFinderTests */,
+				8B10CCE41FBDF174000C0009 /* StationFinderUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8B10CC711FBDEFF2000C0009 /* Resources */ = {
+		8B10CCC01FBDF174000C0009 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B10CC801FBDEFF2000C0009 /* Assets.xcassets in Resources */,
-				8B10CC831FBDEFF2000C0009 /* Main.storyboard in Resources */,
+				8B10CCD21FBDF174000C0009 /* LaunchScreen.storyboard in Resources */,
+				8B10CCCF1FBDF174000C0009 /* Assets.xcassets in Resources */,
+				8B10CCCD1FBDF174000C0009 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B10CC8A1FBDEFF3000C0009 /* Resources */ = {
+		8B10CCD81FBDF174000C0009 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B10CC951FBDEFF3000C0009 /* Resources */ = {
+		8B10CCE31FBDF174000C0009 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,62 +403,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D4D6B59C183742CD01ED52D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2DCE2ED1A1294ED4549F663 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StationFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC3EA9E8230940BFB6D3CB59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BPForms/BPForms.framework",
+				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BPForms.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		8B10CC6F1FBDEFF2000C0009 /* Sources */ = {
+		8B10CCBE1FBDF174000C0009 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B10CC7E1FBDEFF2000C0009 /* StationFinder.xcdatamodeld in Sources */,
-				8B10CC7B1FBDEFF2000C0009 /* ViewController.m in Sources */,
-				8B10CC861FBDEFF2000C0009 /* main.m in Sources */,
-				8B10CC781FBDEFF2000C0009 /* AppDelegate.m in Sources */,
+				8B10CD051FBDF1C1000C0009 /* AppDelegate.m in Sources */,
+				8B10CCCA1FBDF174000C0009 /* ViewController.m in Sources */,
+				8B10CCD51FBDF174000C0009 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B10CC881FBDEFF3000C0009 /* Sources */ = {
+		8B10CCD61FBDF174000C0009 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B10CC911FBDEFF3000C0009 /* StationFinderTests.m in Sources */,
+				8B10CCDF1FBDF174000C0009 /* StationFinderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B10CC931FBDEFF3000C0009 /* Sources */ = {
+		8B10CCE11FBDF174000C0009 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B10CC9C1FBDEFF3000C0009 /* StationFinderUITests.m in Sources */,
+				8B10CCEA1FBDF174000C0009 /* StationFinderUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8B10CC8E1FBDEFF3000C0009 /* PBXTargetDependency */ = {
+		8B10CCDC1FBDF174000C0009 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B10CC721FBDEFF2000C0009 /* StationFinder */;
-			targetProxy = 8B10CC8D1FBDEFF3000C0009 /* PBXContainerItemProxy */;
+			target = 8B10CCC11FBDF174000C0009 /* StationFinder */;
+			targetProxy = 8B10CCDB1FBDF174000C0009 /* PBXContainerItemProxy */;
 		};
-		8B10CC991FBDEFF3000C0009 /* PBXTargetDependency */ = {
+		8B10CCE71FBDF174000C0009 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B10CC721FBDEFF2000C0009 /* StationFinder */;
-			targetProxy = 8B10CC981FBDEFF3000C0009 /* PBXContainerItemProxy */;
+			target = 8B10CCC11FBDF174000C0009 /* StationFinder */;
+			targetProxy = 8B10CCE61FBDF174000C0009 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8B10CC811FBDEFF2000C0009 /* Main.storyboard */ = {
+		8B10CCCB1FBDF174000C0009 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8B10CC821FBDEFF2000C0009 /* Base */,
+				8B10CCCC1FBDF174000C0009 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B10CCD01FBDF174000C0009 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B10CCD11FBDF174000C0009 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8B10CC9E1FBDEFF3000C0009 /* Debug */ = {
+		8B10CCEC1FBDF174000C0009 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -345,7 +556,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -364,14 +575,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		8B10CC9F1FBDEFF3000C0009 /* Release */ = {
+		8B10CCED1FBDF174000C0009 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -400,7 +611,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -413,96 +624,99 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		8B10CCA11FBDEFF3000C0009 /* Debug */ = {
+		8B10CCEF1FBDF174000C0009 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5668A3D7CB7AF75C22E16FE /* Pods-StationFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StationFinder/StationFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VQAA52JP77;
+				DEVELOPMENT_TEAM = 37F2YAD6S8;
+				GCC_PREFIX_HEADER = "stationfinder/app utils/PCH.pch";
 				INFOPLIST_FILE = StationFinder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SuperAwesomeInc.StationFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8B10CCA21FBDEFF3000C0009 /* Release */ = {
+		8B10CCF01FBDF174000C0009 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99808431CB05C46A30FA392D /* Pods-StationFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StationFinder/StationFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VQAA52JP77;
+				DEVELOPMENT_TEAM = 37F2YAD6S8;
+				GCC_PREFIX_HEADER = "stationfinder/app utils/PCH.pch";
 				INFOPLIST_FILE = StationFinder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SuperAwesomeInc.StationFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		8B10CCA41FBDEFF3000C0009 /* Debug */ = {
+		8B10CCF21FBDF174000C0009 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VQAA52JP77;
+				DEVELOPMENT_TEAM = 37F2YAD6S8;
 				INFOPLIST_FILE = StationFinderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SuperAwesomeInc.StationFinderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StationFinder.app/Contents/MacOS/StationFinder";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StationFinder.app/StationFinder";
 			};
 			name = Debug;
 		};
-		8B10CCA51FBDEFF3000C0009 /* Release */ = {
+		8B10CCF31FBDF174000C0009 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VQAA52JP77;
+				DEVELOPMENT_TEAM = 37F2YAD6S8;
 				INFOPLIST_FILE = StationFinderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SuperAwesomeInc.StationFinderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StationFinder.app/Contents/MacOS/StationFinder";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StationFinder.app/StationFinder";
 			};
 			name = Release;
 		};
-		8B10CCA71FBDEFF3000C0009 /* Debug */ = {
+		8B10CCF51FBDF174000C0009 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VQAA52JP77;
+				DEVELOPMENT_TEAM = 37F2YAD6S8;
 				INFOPLIST_FILE = StationFinderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SuperAwesomeInc.StationFinderUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = StationFinder;
 			};
 			name = Debug;
 		};
-		8B10CCA81FBDEFF3000C0009 /* Release */ = {
+		8B10CCF61FBDF174000C0009 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VQAA52JP77;
+				DEVELOPMENT_TEAM = 37F2YAD6S8;
 				INFOPLIST_FILE = StationFinderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SuperAwesomeInc.StationFinderUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = StationFinder;
 			};
 			name = Release;
@@ -510,56 +724,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B10CC6E1FBDEFF2000C0009 /* Build configuration list for PBXProject "StationFinder" */ = {
+		8B10CCBD1FBDF174000C0009 /* Build configuration list for PBXProject "StationFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B10CC9E1FBDEFF3000C0009 /* Debug */,
-				8B10CC9F1FBDEFF3000C0009 /* Release */,
+				8B10CCEC1FBDF174000C0009 /* Debug */,
+				8B10CCED1FBDF174000C0009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B10CCA01FBDEFF3000C0009 /* Build configuration list for PBXNativeTarget "StationFinder" */ = {
+		8B10CCEE1FBDF174000C0009 /* Build configuration list for PBXNativeTarget "StationFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B10CCA11FBDEFF3000C0009 /* Debug */,
-				8B10CCA21FBDEFF3000C0009 /* Release */,
+				8B10CCEF1FBDF174000C0009 /* Debug */,
+				8B10CCF01FBDF174000C0009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B10CCA31FBDEFF3000C0009 /* Build configuration list for PBXNativeTarget "StationFinderTests" */ = {
+		8B10CCF11FBDF174000C0009 /* Build configuration list for PBXNativeTarget "StationFinderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B10CCA41FBDEFF3000C0009 /* Debug */,
-				8B10CCA51FBDEFF3000C0009 /* Release */,
+				8B10CCF21FBDF174000C0009 /* Debug */,
+				8B10CCF31FBDF174000C0009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B10CCA61FBDEFF3000C0009 /* Build configuration list for PBXNativeTarget "StationFinderUITests" */ = {
+		8B10CCF41FBDF174000C0009 /* Build configuration list for PBXNativeTarget "StationFinderUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B10CCA71FBDEFF3000C0009 /* Debug */,
-				8B10CCA81FBDEFF3000C0009 /* Release */,
+				8B10CCF51FBDF174000C0009 /* Debug */,
+				8B10CCF61FBDF174000C0009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8B10CC7C1FBDEFF2000C0009 /* StationFinder.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8B10CC7D1FBDEFF2000C0009 /* StationFinder.xcdatamodel */,
-			);
-			currentVersion = 8B10CC7D1FBDEFF2000C0009 /* StationFinder.xcdatamodel */;
-			path = StationFinder.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 8B10CC6B1FBDEFF2000C0009 /* Project object */;
+	rootObject = 8B10CCBA1FBDF174000C0009 /* Project object */;
 }

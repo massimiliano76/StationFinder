@@ -6,9 +6,9 @@
 //  Copyright © 2017 SuperAwesomeInc. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <UIKit/UIKit.h>
 
-@interface ViewController : NSViewController
+@interface ViewController : UIViewController
 
 
 @end
