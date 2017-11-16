@@ -95,9 +95,29 @@
 }
 
 - (void)returnErrorFromStationsFromHandler:(GetStationsHandler*)handler
-                                  stations:(NSMutableArray*)stations
+                              errorMessage:(NSString*)errorMessage;
 {
+    [self presentErrorWithTitleAndMessage:@"error" message:errorMessage];
+}
+
+#pragma mark - Present Error
+
+- (void)presentErrorWithTitleAndMessage:(NSString*)title message:(NSString*)message
+{
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:title
+                                                                    message:message
+                                                             preferredStyle:UIAlertControllerStyleAlert];
     
+    alert.popoverPresentationController.sourceView = self.view;
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alert addAction:okAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source

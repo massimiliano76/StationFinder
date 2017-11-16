@@ -21,6 +21,8 @@
         if (stationDictionary.allKeys.count > 0) {
          
             [self setBasicVariablesWithStationDictionary:stationDictionary];
+            
+            [self setFacilitiesArrayWithStationDictionary:stationDictionary];
         }
     }
     
@@ -34,12 +36,21 @@
     self.staionNaptanId = stationDictionary[@"naptanId"];
     
     self.name           = stationDictionary[@"commonName"];
-
 }
 
 - (void)setFacilitiesArrayWithStationDictionary:(NSDictionary *)stationDictionary
 {
+    NSArray *additionalProperties = stationDictionary[@"additionalProperties"];
     
+    self.facilities = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *additionalProperty in additionalProperties) {
+        
+        if ([additionalProperty[@"category"] isEqualToString:@"Facility"]) {
+         
+            [self.facilities addObject:additionalProperty];
+        }
+    }
 }
 
 @end

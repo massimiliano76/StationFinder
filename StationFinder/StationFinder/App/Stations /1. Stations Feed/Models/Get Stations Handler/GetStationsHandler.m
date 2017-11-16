@@ -7,25 +7,25 @@
 //
 
 #import "GetStationsHandler.h"
+#import "TubeStation.h"
 
 #define PAGE_COUNT 20
-#define BASE_API_URL @"https://api.tfl.gov.uk"
-#define TFL_API_KEY @"d4b5fef8d4a146b95ea4e6689ac97853"
-#define TFL_APPLICATION_ID @"7ca3324a"
 
 @implementation GetStationsHandler
 
 /**
  Method getNearbyTubeStationsWithLocationDict collects
-     nearby stations based on a given longitue and latitude
+ nearby stations based on a given longitue and latitude
  
  Example:https://api.tfl.gov.uk/stoppoint?lat=51.5226620&lon=-0.0856340&radius=600&stoptypes=NaptanMetroStation&useStopPointHierarchy=false
  
  See:
-     api documentation: https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/StopPoint/StopPoint_GetByGeoPoint
-     search api call: "Gets a list of StopPoints within {radius} by the specified criteria"
+ api documentation: https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/StopPoint/StopPoint_GetByGeoPoint
+ search api call: "Gets a list of StopPoints within {radius} by the specified criteria"
  
- @param locationDictionary contains location longitue and latitude
+ @param radius area that the stations must be in given the longitude and latitide
+ @param latitude users location latitude
+ @param longitude users location longitude
  */
 - (void)getNearbyTubeStationsWithLocationInfo:(NSInteger)radius
                                      latitude:(NSString*)latitude
@@ -43,17 +43,41 @@
     
     NSString *urlString     = [NSString stringWithFormat:@"%@/stoppoint%@%@%@", BASE_API_URL, lonLatSection, radiusSection, restOfUrl];
     
-    NSDictionary *parameters= @{@"app_key": TFL_API_KEY,
-                                @"app_id": TFL_APPLICATION_ID};
-    
     [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
     
         NSLog(@"JSON: %@", responseObject);
+        
+        NSDictionary *resultsDictionary = responseObject;
+        
+        NSArray *resultsArray           = resultsDictionary[@"stopPoints"];
+        
+        NSMutableArray *resultsFinal    = [self createTubeStationsArray:resultsArray];
+        
+        [self returnStationsToCaller:resultsFinal];
     
     }failure:^(NSURLSessionTask *operation, NSError *error) {
      
         NSLog(@"Error: %@", error);
+        
+        NSString *errorMessage = [self createErrorMessageWithError:error];
+        
+        [self returnErrorToCaller:errorMessage];
+        
     }];
+}
+
+- (NSMutableArray*)createTubeStationsArray:(NSArray*)results
+{
+    NSMutableArray *stationsArray = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *stationDictionary in results) {
+        
+        TubeStation *station = [[TubeStation alloc] initWithStationDictionary:stationDictionary];
+        
+        [stationsArray addObject:station];
+    }
+    
+    return stationsArray;
 }
 
 - (void)returnStationsToCaller:(NSMutableArray*)stations
@@ -64,6 +88,28 @@
         
         [strongDelegate returnStationsFromHandler:self stations:stations];
     }
+}
+
+- (void)returnErrorToCaller:(NSString *)errorMessage
+{
+    id <GetStationsHandlerDelegate> strongDelegate = self.delegate;
+    
+    if ([strongDelegate respondsToSelector:@selector(returnErrorFromStationsFromHandler:errorMessage:)]) {
+        
+        [strongDelegate returnErrorFromStationsFromHandler:self errorMessage:errorMessage];
+    }
+}
+
+- (NSString *)createErrorMessageWithError:(NSError*)error
+{
+    NSString *errorMessage = @"Error";
+ 
+    if (error) {
+        
+        errorMessage = [NSString stringWithFormat:@"Error: %@", error];
+    }
+    
+    return errorMessage;
 }
 
 @end

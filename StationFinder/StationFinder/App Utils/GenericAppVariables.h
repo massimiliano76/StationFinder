@@ -8,36 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-// For Upload Listing
-
-#define kMaxPriceLength 8
-
-// For Create Category
-
-#define kCategoryDescriptionCharacterLimit 80
-#define kWarningOneCategoryDescriptionCharacterLimit 60
-#define kWarningTwoCategoryDescriptionCharacterLimit 70
-
-// For Create Tag
-
-#define kTagDescriptionCharacterLimit 80
-#define kWarningOneTagDescriptionCharacterLimit 60
-#define kWarningTwoTagDescriptionCharacterLimit 70
-
-// For Create Thought
-
-#define kMaxThoughtCategoryCount 3
-
-#define kThoughtTextCharacterLimit 150
-#define kWarningOneThoughtTextCharacterLimit 140
-#define kWarningTwoThoughtTextCharacterLimit 150
-
-// For Create Group
-
-#define kGroupDescriptionCharacterLimit 80
-#define kWarningOneGroupDescriptionCharacterLimit 60
-#define kWarningTwoGroupDescriptionCharacterLimit 70
-
 /** String: Identifier **/
 #define DEVICE_IDENTIFIER ( ( IS_IPAD ) ? DEVICE_IPAD : ( IS_IPHONE ) ? DEVICE_IPHONE , DEVICE_SIMULATOR )
 

@@ -56,7 +56,7 @@
 		8B10CCEB1FBDF174000C0009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B10CCF81FBDF1C0000C0009 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B10CCF91FBDF1C0000C0009 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8B10CD081FBDF254000C0009 /* VariableUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableUtils.h; sourceTree = "<group>"; };
+		8B10CD081FBDF254000C0009 /* GenericAppVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericAppVariables.h; sourceTree = "<group>"; };
 		8B10CD091FBDF296000C0009 /* PCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PCH.pch; path = "StationFinder/App Utils/PCH.pch"; sourceTree = SOURCE_ROOT; };
 		8B10CD181FBDF548000C0009 /* StationsFeedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsFeedTableViewController.h; sourceTree = "<group>"; };
 		8B10CD191FBDF548000C0009 /* StationsFeedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsFeedTableViewController.m; sourceTree = "<group>"; };
@@ -64,6 +64,7 @@
 		8B10CD1E1FBDF5CD000C0009 /* GetStationsHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetStationsHandler.m; sourceTree = "<group>"; };
 		8B10CD201FBE1403000C0009 /* TubeStation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TubeStation.h; sourceTree = "<group>"; };
 		8B10CD211FBE1403000C0009 /* TubeStation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TubeStation.m; sourceTree = "<group>"; };
+		8B10CD231FBE2266000C0009 /* TFLVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFLVariables.h; sourceTree = "<group>"; };
 		99808431CB05C46A30FA392D /* Pods-StationFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.release.xcconfig"; sourceTree = "<group>"; };
 		C5668A3D7CB7AF75C22E16FE /* Pods-StationFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,7 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				8B10CD091FBDF296000C0009 /* PCH.pch */,
-				8B10CD081FBDF254000C0009 /* VariableUtils.h */,
+				8B10CD081FBDF254000C0009 /* GenericAppVariables.h */,
+				8B10CD231FBE2266000C0009 /* TFLVariables.h */,
 			);
 			path = "App Utils";
 			sourceTree = "<group>";

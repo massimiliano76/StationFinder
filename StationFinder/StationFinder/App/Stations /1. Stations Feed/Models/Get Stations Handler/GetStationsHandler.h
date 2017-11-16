@@ -30,7 +30,7 @@
 
 - (void)returnStationsFromHandler:(GetStationsHandler*)handler stations:(NSMutableArray*)stations;
 
-- (void)returnErrorFromStationsFromHandler:(GetStationsHandler*)handler stations:(NSMutableArray*)stations;
+- (void)returnErrorFromStationsFromHandler:(GetStationsHandler*)handler errorMessage:(NSString*)errorMessage;
 
 @optional
 
