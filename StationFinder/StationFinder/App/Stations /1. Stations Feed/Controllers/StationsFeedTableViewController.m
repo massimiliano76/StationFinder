@@ -11,9 +11,13 @@
 #import "LocationHandler.h"
 #import "GetStationsHandler.h"
 
+#import "StationsFeedTableViewCell.h"
+
 @interface StationsFeedTableViewController () <LocationHandlerDelegate, GetStationsHandlerDelegate>
 {
     NSInteger searchRadius;
+    
+    BOOL isReloading;
 }
 
 @property (nonatomic, strong) GetStationsHandler *stationsHandler;
@@ -30,7 +34,11 @@
    
     [super viewDidLoad];
     
+    [self registerTableViewCells];
+    
     [self setupVariables];
+    
+    [self setupViewAppearance];
 
     [self collectDataForView];
 }
@@ -79,15 +87,20 @@
  */
 - (void)collectDataForView
 {
-    if ([CLLocationManager locationServicesEnabled]){
+    if (!isReloading) {
+     
+        isReloading = YES;
         
-        [self.locationHandler beingCollectingUsersLocation];
-    
-    }else{
-        
-        [self.locationHandler.locationManager requestWhenInUseAuthorization];
-        
-        [self getNearbyStationsWithUsersLocation:[self.locationHandler getHandlerDefaultLocation]];
+        if ([CLLocationManager locationServicesEnabled]){
+            
+            [self.locationHandler beginCollectingUsersLocation];
+            
+        }else{
+            
+            [self.locationHandler.locationManager requestWhenInUseAuthorization];
+            
+            [self getNearbyStationsWithUsersLocation:[self.locationHandler getHandlerDefaultLocation]];
+        }
     }
 }
 
@@ -120,13 +133,95 @@
 {
     self.stations = stations;
     
-    // [self.tableView reloadData];
+    [self.tableView reloadData];
+    
+    isReloading = NO;
 }
 
 - (void)returnErrorFromStationsFromHandler:(GetStationsHandler*)handler
                               errorMessage:(NSString*)errorMessage;
 {
     [self presentErrorWithTitleAndMessage:@"error" message:errorMessage];
+}
+
+#pragma mark - Setup View Appearance
+
+- (void)setupViewAppearance
+{
+    [self setupNavigationBarAppearance];
+    
+    [self setupTableView];
+}
+
+#pragma mark - Navigation Bar Appearance
+
+- (void)setupNavigationBarAppearance
+{
+    [self setupStatusBar];
+    
+    [self setupNavigationBar];
+    
+    [self setupNavigationItem];
+}
+
+- (void)setupStatusBar
+{
+    [UIApplication sharedApplication].statusBarStyle = UIBarStyleDefault;
+}
+
+- (void)setupNavigationBar
+{
+    self.title = @"Nearby Stations";
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    [self.navigationController.navigationBar setTranslucent: NO];
+    
+    [self.navigationController.navigationBar setBarTintColor:kAppWhite];
+}
+
+- (void)setupNavigationItem
+{
+    [self.navigationItem setHidesBackButton:YES];
+}
+
+#pragma mark - Setup Table View
+
+- (void)setupTableView
+{
+    [self registerTableViewCells];
+    
+    self.view.backgroundColor       = kAppUltraLightGray;
+    
+    self.tableView.backgroundColor  = kAppUltraLightGray;
+    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+    [self.tableView setContentInset:UIEdgeInsetsMake(25,0,0,0)];
+    
+    //[self setupPullToRefresh];
+}
+
+- (void)setupPullToRefresh
+{
+    if (!self.refreshControl) {
+        
+        self.refreshControl = [[UIRefreshControl alloc] init];
+    }
+    
+    self.refreshControl.tintColor       = kAppDarkGray;
+    
+    self.refreshControl.backgroundColor = [UIColor clearColor];
+    
+    [self.refreshControl addTarget:self
+                            action:@selector(collectDataForView)
+                  forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)registerTableViewCells
+{
+    [self.tableView registerNib:[UINib nibWithNibName:kStationsFeedTableViewCellCellNibName bundle:[NSBundle mainBundle]]
+         forCellReuseIdentifier:kStationsFeedTableViewCellID];
 }
 
 #pragma mark - Present Error
@@ -161,15 +256,42 @@
     return [self.stations count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    StationsFeedTableViewCell *feedCell = [[StationsFeedTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kStationsFeedTableViewCellID];
     
-    // Configure the cell...
+    if (feedCell == nil) {
+        
+        feedCell = [[StationsFeedTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                                    reuseIdentifier:kStationsFeedTableViewCellID];
+    }
     
-    return cell;
+    feedCell.backgroundColor = [UIColor redColor];
+    
+    if ([self.stations objectAtIndex:indexPath.row]) {
+        
+        TubeStation *station = [self.stations objectAtIndex:indexPath.row];
+ 
+        [feedCell configureWithStation:station];
+    }
+    
+    return feedCell;
 }
-*/
+
+#pragma mark - Table view delegat
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger height = 100;
+    
+    return height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

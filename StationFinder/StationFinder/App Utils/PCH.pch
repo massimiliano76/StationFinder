@@ -8,10 +8,12 @@
 
 #pragma mark - In App Files
 
-#import "GenericAppVariables.h"
+#import "Variables.h"
 #import "TFLVariables.h"
+#import "TubeStation.h"
 
 #pragma mark - Frameworks
 
 #import "AFNetworking.h"
-
+#import "Masonry.h"
+#import "Colours.h"

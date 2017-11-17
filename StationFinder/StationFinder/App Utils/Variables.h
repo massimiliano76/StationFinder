@@ -8,6 +8,88 @@
 
 #import <Foundation/Foundation.h>
 
+/** Colour Scheme Colours **/
+
+#define kAppWhite ([UIColor colorFromHexString:@"FFFFFF"])
+
+#define kAppBlack ([UIColor colorFromHexString:@"000000"])
+
+#define kAppDarkGray ([UIColor colorFromHexString:@"333333"])
+
+#define kAppLightGray ([UIColor colorFromHexString:@"F3F3F3"])
+
+#define kAppMediumLightGray ([UIColor colorFromHexString:@"E8E6E3"])
+
+#define kAppUltraLightGray ([UIColor colorFromHexString:@"FAFAFA"])
+
+#define kAppMainBlue ([UIColor colorFromHexString:@"42B0F9"])
+
+#define kAppGreen ([UIColor colorFromHexString:@"96D35F"])
+
+/** Fonts **/
+
+// Light
+
+static NSString * const kAppFontLight = @"FuturaBT-Light";
+static NSString * const kAppFontLightItalic = @"FuturaBT-LightItalic";
+static NSString * const kAppFontCondensedLight = @"Futura-CondensedLight";
+
+// Regular
+
+static NSString * const kAppFontRegular = @"Futura";
+
+// Medium
+
+static NSString * const kAppFontMedium = @"FuturaBT-Medium";
+static NSString * const kAppFontMediumItalic = @"FuturaBT-MediumItalic";
+static NSString * const kAppFontMediumCondensed = @"FuturaBT-MediumCondensed";
+
+// Book
+
+static NSString * const kAppFontBook = @"FuturaBT-Book";
+static NSString * const kAppFontBookItalic = @"FuturaBT-BookItalic";
+
+// Bold
+
+static NSString * const kAppFontBold = @"Futura-Bold";
+static NSString * const kAppFontBoldItalic = @"Futura-BoldItalic";
+static NSString * const kAppFontCondensedBold = @"Futura-CondensedExtraBold";
+
+// Heavy
+
+static NSString * const kAppFontExtraHeavy = @"FuturaBT-Heavy";
+static NSString * const kAppFontExtraHeavyItalic = @"FuturaBT-HeavyItalic";
+
+// Black
+
+static NSString * const kAppFontExtraBlack = @"FuturaBT-ExtraBlack";
+static NSString * const kAppFontExtraBlackCondensedItalic = @"FuturaBT-ExtraBlackCondItalic";
+
+
+// Helventica
+
+static NSString * const kHelveticaNeueRegular = @"HelveticaNeue";
+
+static NSString * const kHelveticaNeueMedium = @"HelveticaNeue-Medium";
+static NSString * const kHelveticaNeueMediumItalic = @"HelveticaNeue-MediumItalic";
+
+static NSString * const kHelveticaNeueLight = @"HelveticaNeue-Light";
+static NSString * const kHelveticaNeueLightItalic = @"HelveticaNeue-LightItalic";
+
+static NSString * const kHelveticaNeueUltraLight = @"HelveticaNeue-UltraLight";
+static NSString * const kHelveticaNeueUltraLightItalic = @"HelveticaNeue-UltraLightItalic";
+
+static NSString * const kHelveticaNeueThin = @"HelveticaNeue-Thin";
+static NSString * const kHelveticaNeueThinItalic = @"HelveticaNeue-ThinItalic";
+
+static NSString * const kHelveticaNeueBold = @"HelveticaNeue-Bold";
+static NSString * const kHelveticaNeueBoldItalic = @"HelveticaNeue-BoldItalic";
+
+static NSString * const kHelveticaNeueCondensedBlack = @"HelveticaNeue-CondensedBlack";
+static NSString * const kHelveticaNeueCondensedBold = @"HelveticaNeue-CondensedBold";
+
+#define font(_name_, _size_) ((UIFont *)[UIFont fontWithName:(NSString *)(_name_) size:(CGFloat)(_size_)])
+
 /** String: Identifier **/
 #define DEVICE_IDENTIFIER ( ( IS_IPAD ) ? DEVICE_IPAD : ( IS_IPHONE ) ? DEVICE_IPHONE , DEVICE_SIMULATOR )
 

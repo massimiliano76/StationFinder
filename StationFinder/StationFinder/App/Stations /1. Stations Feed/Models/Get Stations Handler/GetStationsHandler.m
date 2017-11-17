@@ -45,8 +45,6 @@
     
     [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
     
-        NSLog(@"JSON: %@", responseObject);
-        
         NSDictionary *resultsDictionary = responseObject;
         
         NSArray *resultsArray           = resultsDictionary[@"stopPoints"];

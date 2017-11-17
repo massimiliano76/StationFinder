@@ -22,7 +22,7 @@
 
 #pragma mark - Methods
 
-- (void)beingCollectingUsersLocation;
+- (void)beginCollectingUsersLocation;
 
 - (CLLocation*)getHandlerDefaultLocation;
 

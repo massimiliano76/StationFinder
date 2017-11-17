@@ -37,6 +37,8 @@
         self.locationManager.delegate           = self;
     
         self.locationManager.desiredAccuracy    = kCLLocationAccuracyBest;
+        
+        [self.locationManager requestWhenInUseAuthorization];
     }
 }
 
@@ -45,7 +47,7 @@
    self.defaultLocation = [[CLLocation alloc] initWithLatitude:51.507351051 longitude:-0.12775800];
 }
 
-- (void)beingCollectingUsersLocation
+- (void)beginCollectingUsersLocation
 {
     [self.locationManager startUpdatingLocation];
 }

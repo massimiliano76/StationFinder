@@ -21,6 +21,7 @@
 		8B10CD221FBE1403000C0009 /* TubeStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD211FBE1403000C0009 /* TubeStation.m */; };
 		8B10CD291FBE3EB1000C0009 /* LocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD281FBE3EB1000C0009 /* LocationHandler.m */; };
 		8B10CD2B1FBE4B79000C0009 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B10CD2A1FBE4B79000C0009 /* MapKit.framework */; };
+		8B10CD2E1FBE538B000C0009 /* StationsFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD2D1FBE538B000C0009 /* StationsFeedTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,7 @@
 		8B10CCEB1FBDF174000C0009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B10CCF81FBDF1C0000C0009 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B10CCF91FBDF1C0000C0009 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8B10CD081FBDF254000C0009 /* GenericAppVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericAppVariables.h; sourceTree = "<group>"; };
+		8B10CD081FBDF254000C0009 /* Variables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variables.h; sourceTree = "<group>"; };
 		8B10CD091FBDF296000C0009 /* PCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PCH.pch; path = "StationFinder/App Utils/PCH.pch"; sourceTree = SOURCE_ROOT; };
 		8B10CD181FBDF548000C0009 /* StationsFeedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsFeedTableViewController.h; sourceTree = "<group>"; };
 		8B10CD191FBDF548000C0009 /* StationsFeedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsFeedTableViewController.m; sourceTree = "<group>"; };
@@ -70,6 +71,8 @@
 		8B10CD271FBE3EB1000C0009 /* LocationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationHandler.h; sourceTree = "<group>"; };
 		8B10CD281FBE3EB1000C0009 /* LocationHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationHandler.m; sourceTree = "<group>"; };
 		8B10CD2A1FBE4B79000C0009 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8B10CD2C1FBE538B000C0009 /* StationsFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsFeedTableViewCell.h; sourceTree = "<group>"; };
+		8B10CD2D1FBE538B000C0009 /* StationsFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsFeedTableViewCell.m; sourceTree = "<group>"; };
 		99808431CB05C46A30FA392D /* Pods-StationFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.release.xcconfig"; sourceTree = "<group>"; };
 		C5668A3D7CB7AF75C22E16FE /* Pods-StationFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				8B10CD091FBDF296000C0009 /* PCH.pch */,
-				8B10CD081FBDF254000C0009 /* GenericAppVariables.h */,
+				8B10CD081FBDF254000C0009 /* Variables.h */,
 				8B10CD231FBE2266000C0009 /* TFLVariables.h */,
 			);
 			path = "App Utils";
@@ -308,6 +311,8 @@
 		8B10CD1B1FBDF586000C0009 /* Stations Feed Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8B10CD2C1FBE538B000C0009 /* StationsFeedTableViewCell.h */,
+				8B10CD2D1FBE538B000C0009 /* StationsFeedTableViewCell.m */,
 			);
 			path = "Stations Feed Table View Cell";
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BPForms/BPForms.framework",
+				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -520,6 +526,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BPForms.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
@@ -538,6 +545,7 @@
 			files = (
 				8B10CD1A1FBDF548000C0009 /* StationsFeedTableViewController.m in Sources */,
 				8B10CD051FBDF1C1000C0009 /* AppDelegate.m in Sources */,
+				8B10CD2E1FBE538B000C0009 /* StationsFeedTableViewCell.m in Sources */,
 				8B10CD291FBE3EB1000C0009 /* LocationHandler.m in Sources */,
 				8B10CD221FBE1403000C0009 /* TubeStation.m in Sources */,
 				8B10CD1F1FBDF5CD000C0009 /* GetStationsHandler.m in Sources */,
