@@ -61,7 +61,7 @@
 
 - (void)setupVariables
 {
-    searchRadius = 500; // meters
+    searchRadius = 1000; // meters
     
     [self initHandlers];
 }

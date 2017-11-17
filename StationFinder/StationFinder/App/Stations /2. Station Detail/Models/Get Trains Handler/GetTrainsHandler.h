@@ -18,13 +18,11 @@
 
 #pragma mark - Methods
 
-- (void)getNearbyTubeStationsWithLocationInfo:(NSInteger)radius
-                                     latitude:(NSString*)latitude
-                                    longitude:(NSString*)longitude;
+- (void)getNextFewTrainsFromStationWithId:(NSString*)stationId;
 
 @end
 
-@protocol GetTrainsHandlerDelegate  <NSObject>
+@protocol GetTrainsHandlerDelegate<NSObject>
 
 @required
 

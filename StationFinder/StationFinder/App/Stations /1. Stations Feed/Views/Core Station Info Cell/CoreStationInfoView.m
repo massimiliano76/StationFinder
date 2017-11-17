@@ -84,7 +84,7 @@
     
     self.stationName.adjustsFontSizeToFitWidth = YES;
     
-    [self addSubview:self.stationName];
+    [self.containerView addSubview:self.stationName];
     
     [self.stationName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.containerView.mas_centerY);
@@ -111,7 +111,7 @@
     
     self.distance.adjustsFontSizeToFitWidth = YES;
     
-    [self addSubview:self.distance];
+    [self.containerView addSubview:self.distance];
     
     [self.distance mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.stationName.mas_centerY);

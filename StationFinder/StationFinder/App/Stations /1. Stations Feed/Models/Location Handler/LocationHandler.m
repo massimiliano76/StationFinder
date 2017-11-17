@@ -9,6 +9,11 @@
 #import "LocationHandler.h"
 
 @interface LocationHandler () <CLLocationManagerDelegate>
+{
+    NSInteger seconds;
+    
+    NSTimer *timer;
+}
 
 @property (nonatomic, strong) CLLocation *defaultLocation; // Center of London
 
@@ -50,6 +55,8 @@
 - (void)beginCollectingUsersLocation
 {
     [self.locationManager startUpdatingLocation];
+    
+    [self runWaitTimer];
 }
 
 - (void)stopCollectingUsersLocation
@@ -82,7 +89,7 @@
            fromLocation:(CLLocation *)oldLocation
 {
     [self stopCollectingUsersLocation];
-    
+ 
     NSLog(@"New Location Collected: %@", newLocation);
     
     CLLocation *currentLocation = newLocation;
@@ -132,10 +139,53 @@
      }];
 }
 
+#pragma mark - Timer
+
+- (void)killWaitTimer
+{
+    [timer invalidate];
+}
+
+- (void)runWaitTimer
+{
+    seconds = 10;
+    
+    timer   = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                               target:self
+                                             selector:@selector(countDownTimer)
+                                             userInfo:nil
+                                              repeats:YES];
+}
+
+- (void)countDownTimer
+{
+    if (seconds == 0) {
+        
+        [self killWaitTimer];
+        
+        [self sendBackLocation:self.defaultLocation];
+        
+    }else{
+        
+        seconds--;
+    }
+}
+
+#pragma mark - Kill Handler
+
+- (void)killHandler
+{
+    [self killWaitTimer];
+    
+    [self stopCollectingUsersLocation];
+}
+
 #pragma mark - Location Handler Delegate Method Calls
 
 - (void)sendBackLocation:(CLLocation*)currentLocation
 {
+    [self killHandler];
+    
     id <LocationHandlerDelegate> strongDelegate = self.delegate;
     
     if ([strongDelegate respondsToSelector:@selector(returnLocationFromLocationHandler:location:)]) {
@@ -146,6 +196,8 @@
 
 - (void)returnErrorToCaller:(NSString *)errorMessage
 {
+    [self killWaitTimer];
+    
     id <LocationHandlerDelegate> strongDelegate = self.delegate;
     
     if ([strongDelegate respondsToSelector:@selector(returnErrorFromLocationHandler:errorMessage:)]) {

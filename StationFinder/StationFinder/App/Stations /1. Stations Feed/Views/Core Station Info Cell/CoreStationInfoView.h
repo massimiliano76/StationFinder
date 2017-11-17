@@ -24,6 +24,4 @@
 
 - (void)configureWithStation:(TubeStation*)station;
 
-- (void)configureWithTrainTime:(TubeStation*)station;
-
 @end

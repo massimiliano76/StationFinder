@@ -31,7 +31,7 @@
 {
     self.value      = facilityDictionary[@"value"];
     
-    self.key        = facilityDictionary[@"key"];
+    self.name       = facilityDictionary[@"key"];
     
     self.category   = facilityDictionary[@"category"];
     

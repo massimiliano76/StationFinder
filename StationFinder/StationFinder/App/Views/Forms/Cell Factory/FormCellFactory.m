@@ -10,21 +10,28 @@
 
 @implementation FormCellFactory
 
-#pragma mark - Text Input Cells
+#pragma mark - Core Cells
 
 - (CardFormTextInputCell*)cardFormTextInputCell
 {
     return [[CardFormTextInputCell alloc] init];
 }
 
+#pragma mark - Station Detail Cells
+
 - (CoreStationInfoFormTableViewCell*)coreStationInfoFormTableViewCell
 {
     return [[CoreStationInfoFormTableViewCell alloc] init];
 }
 
-- (NextTrainsTableViewCell*)nextTrainsTableViewCell
+- (NextTrainsFormTableViewCell*)nextTrainsFormTableViewCell
 {
-    return [[NextTrainsTableViewCell alloc] init];
+    return [[NextTrainsFormTableViewCell alloc] init];
+}
+
+- (StationFacilitiesFormTableViewCell*)stationFacilitiesFormTableViewCell
+{
+    return [[StationFacilitiesFormTableViewCell alloc] init];
 }
 
 @end

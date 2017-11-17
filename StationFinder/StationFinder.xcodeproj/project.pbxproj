@@ -30,8 +30,14 @@
 		8B10CD601FBE688C000C0009 /* FormTextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD5B1FBE688C000C0009 /* FormTextInputCell.m */; };
 		8B10CD6B1FBE69B2000C0009 /* CoreStationInfoFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD6A1FBE69B2000C0009 /* CoreStationInfoFormTableViewCell.m */; };
 		8B10CD6E1FBE6B22000C0009 /* StationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD6D1FBE6B22000C0009 /* StationDetailViewController.m */; };
-		8B10CD721FBE72C9000C0009 /* NextTrainsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD711FBE72C9000C0009 /* NextTrainsTableViewCell.m */; };
+		8B10CD721FBE72C9000C0009 /* NextTrainsFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD711FBE72C9000C0009 /* NextTrainsFormTableViewCell.m */; };
 		8B10CD751FBE777C000C0009 /* GetTrainsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD741FBE777C000C0009 /* GetTrainsHandler.m */; };
+		8B10CD7B1FBEC78A000C0009 /* Train.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD7A1FBEC78A000C0009 /* Train.m */; };
+		8B10CD801FBECD5E000C0009 /* TrainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD7F1FBECD5E000C0009 /* TrainTableViewCell.m */; };
+		8B10CD881FBEE84E000C0009 /* StationFacilitiesFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD871FBEE84E000C0009 /* StationFacilitiesFormTableViewCell.m */; };
+		8B10CD901FBEFA1F000C0009 /* FacilityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD8E1FBEFA1F000C0009 /* FacilityCollectionViewCell.m */; };
+		8B10CD911FBEFA1F000C0009 /* FacilityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B10CD8F1FBEFA1F000C0009 /* FacilityCollectionViewCell.xib */; };
+		8B10CD941FBF107D000C0009 /* StationFacilityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B10CD931FBF107D000C0009 /* StationFacilityDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,10 +105,21 @@
 		8B10CD6A1FBE69B2000C0009 /* CoreStationInfoFormTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreStationInfoFormTableViewCell.m; sourceTree = "<group>"; };
 		8B10CD6C1FBE6B22000C0009 /* StationDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationDetailViewController.h; sourceTree = "<group>"; };
 		8B10CD6D1FBE6B22000C0009 /* StationDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationDetailViewController.m; sourceTree = "<group>"; };
-		8B10CD701FBE72C9000C0009 /* NextTrainsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextTrainsTableViewCell.h; sourceTree = "<group>"; };
-		8B10CD711FBE72C9000C0009 /* NextTrainsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextTrainsTableViewCell.m; sourceTree = "<group>"; };
+		8B10CD701FBE72C9000C0009 /* NextTrainsFormTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextTrainsFormTableViewCell.h; sourceTree = "<group>"; };
+		8B10CD711FBE72C9000C0009 /* NextTrainsFormTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextTrainsFormTableViewCell.m; sourceTree = "<group>"; };
 		8B10CD731FBE777C000C0009 /* GetTrainsHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetTrainsHandler.h; sourceTree = "<group>"; };
 		8B10CD741FBE777C000C0009 /* GetTrainsHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetTrainsHandler.m; sourceTree = "<group>"; };
+		8B10CD791FBEC78A000C0009 /* Train.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Train.h; sourceTree = "<group>"; };
+		8B10CD7A1FBEC78A000C0009 /* Train.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Train.m; sourceTree = "<group>"; };
+		8B10CD7E1FBECD5E000C0009 /* TrainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainTableViewCell.h; sourceTree = "<group>"; };
+		8B10CD7F1FBECD5E000C0009 /* TrainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainTableViewCell.m; sourceTree = "<group>"; };
+		8B10CD861FBEE84E000C0009 /* StationFacilitiesFormTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationFacilitiesFormTableViewCell.h; sourceTree = "<group>"; };
+		8B10CD871FBEE84E000C0009 /* StationFacilitiesFormTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationFacilitiesFormTableViewCell.m; sourceTree = "<group>"; };
+		8B10CD8D1FBEFA1F000C0009 /* FacilityCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacilityCollectionViewCell.h; sourceTree = "<group>"; };
+		8B10CD8E1FBEFA1F000C0009 /* FacilityCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacilityCollectionViewCell.m; sourceTree = "<group>"; };
+		8B10CD8F1FBEFA1F000C0009 /* FacilityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacilityCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B10CD921FBF107D000C0009 /* StationFacilityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationFacilityDetailViewController.h; sourceTree = "<group>"; };
+		8B10CD931FBF107D000C0009 /* StationFacilityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationFacilityDetailViewController.m; sourceTree = "<group>"; };
 		99808431CB05C46A30FA392D /* Pods-StationFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.release.xcconfig"; sourceTree = "<group>"; };
 		C5668A3D7CB7AF75C22E16FE /* Pods-StationFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StationFinder/Pods-StationFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				8B10CD0C1FBDF4FA000C0009 /* Controllers */,
-				8B10CD0D1FBDF4FA000C0009 /* Helpers */,
 				8B10CD0E1FBDF4FA000C0009 /* Models */,
 				8B10CD0F1FBDF4FA000C0009 /* Views */,
 			);
@@ -272,13 +288,6 @@
 				8B10CD191FBDF548000C0009 /* StationsFeedTableViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		8B10CD0D1FBDF4FA000C0009 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8B10CD0E1FBDF4FA000C0009 /* Models */ = {
@@ -302,8 +311,8 @@
 		8B10CD101FBDF4FA000C0009 /* 2. Station Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8B10CD7C1FBECD2E000C0009 /* Views */,
 				8B10CD111FBDF4FA000C0009 /* Controllers */,
-				8B10CD121FBDF4FA000C0009 /* Helpers */,
 				8B10CD131FBDF4FA000C0009 /* Models */,
 			);
 			path = "2. Station Detail";
@@ -318,18 +327,10 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		8B10CD121FBDF4FA000C0009 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				8B10CD731FBE777C000C0009 /* GetTrainsHandler.h */,
-				8B10CD741FBE777C000C0009 /* GetTrainsHandler.m */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		8B10CD131FBDF4FA000C0009 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8B10CD811FBEE7E6000C0009 /* Get Trains Handler */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,6 +338,9 @@
 		8B10CD141FBDF4FA000C0009 /* 3. Station Facilities Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8B10CD821FBEE817000C0009 /* Controllers */,
+				8B10CD831FBEE818000C0009 /* Models */,
+				8B10CD841FBEE818000C0009 /* Views */,
 			);
 			path = "3. Station Facilities Detail";
 			sourceTree = "<group>";
@@ -398,6 +402,7 @@
 		8B10CD351FBE6558000C0009 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B10CD781FBEC780000C0009 /* Train */,
 				8B10CD331FBE6537000C0009 /* Tube Station */,
 				8B10CD341FBE654D000C0009 /* Facility */,
 			);
@@ -454,9 +459,7 @@
 		8B10CD541FBE688C000C0009 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8B10CD6F1FBE72A3000C0009 /* Next Trains Form Cell */,
 				8B10CD551FBE688C000C0009 /* Core Cells */,
-				8B10CD5C1FBE688C000C0009 /* Core Station Info Form Cell */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -500,10 +503,91 @@
 		8B10CD6F1FBE72A3000C0009 /* Next Trains Form Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8B10CD701FBE72C9000C0009 /* NextTrainsTableViewCell.h */,
-				8B10CD711FBE72C9000C0009 /* NextTrainsTableViewCell.m */,
+				8B10CD701FBE72C9000C0009 /* NextTrainsFormTableViewCell.h */,
+				8B10CD711FBE72C9000C0009 /* NextTrainsFormTableViewCell.m */,
 			);
 			path = "Next Trains Form Cell";
+			sourceTree = "<group>";
+		};
+		8B10CD781FBEC780000C0009 /* Train */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD791FBEC78A000C0009 /* Train.h */,
+				8B10CD7A1FBEC78A000C0009 /* Train.m */,
+			);
+			path = Train;
+			sourceTree = "<group>";
+		};
+		8B10CD7C1FBECD2E000C0009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD891FBEEAE7000C0009 /* Facility Collection View Cell */,
+				8B10CD5C1FBE688C000C0009 /* Core Station Info Form Cell */,
+				8B10CD6F1FBE72A3000C0009 /* Next Trains Form Cell */,
+				8B10CD851FBEE831000C0009 /* Station Facilities Form Cell */,
+				8B10CD7D1FBECD4B000C0009 /* Train Table View Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B10CD7D1FBECD4B000C0009 /* Train Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD7E1FBECD5E000C0009 /* TrainTableViewCell.h */,
+				8B10CD7F1FBECD5E000C0009 /* TrainTableViewCell.m */,
+			);
+			path = "Train Table View Cell";
+			sourceTree = "<group>";
+		};
+		8B10CD811FBEE7E6000C0009 /* Get Trains Handler */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD731FBE777C000C0009 /* GetTrainsHandler.h */,
+				8B10CD741FBE777C000C0009 /* GetTrainsHandler.m */,
+			);
+			path = "Get Trains Handler";
+			sourceTree = "<group>";
+		};
+		8B10CD821FBEE817000C0009 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD921FBF107D000C0009 /* StationFacilityDetailViewController.h */,
+				8B10CD931FBF107D000C0009 /* StationFacilityDetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B10CD831FBEE818000C0009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B10CD841FBEE818000C0009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B10CD851FBEE831000C0009 /* Station Facilities Form Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD861FBEE84E000C0009 /* StationFacilitiesFormTableViewCell.h */,
+				8B10CD871FBEE84E000C0009 /* StationFacilitiesFormTableViewCell.m */,
+			);
+			path = "Station Facilities Form Cell";
+			sourceTree = "<group>";
+		};
+		8B10CD891FBEEAE7000C0009 /* Facility Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8B10CD8D1FBEFA1F000C0009 /* FacilityCollectionViewCell.h */,
+				8B10CD8E1FBEFA1F000C0009 /* FacilityCollectionViewCell.m */,
+				8B10CD8F1FBEFA1F000C0009 /* FacilityCollectionViewCell.xib */,
+			);
+			path = "Facility Collection View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,6 +710,7 @@
 				8B10CCD21FBDF174000C0009 /* LaunchScreen.storyboard in Resources */,
 				8B10CCCF1FBDF174000C0009 /* Assets.xcassets in Resources */,
 				8B10CCCD1FBDF174000C0009 /* Main.storyboard in Resources */,
+				8B10CD911FBEFA1F000C0009 /* FacilityCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,19 +801,24 @@
 			files = (
 				8B10CD1A1FBDF548000C0009 /* StationsFeedTableViewController.m in Sources */,
 				8B10CD5F1FBE688C000C0009 /* CardFormTextInputCell.m in Sources */,
+				8B10CD7B1FBEC78A000C0009 /* Train.m in Sources */,
 				8B10CD531FBE6845000C0009 /* FormViewController.m in Sources */,
 				8B10CD051FBDF1C1000C0009 /* AppDelegate.m in Sources */,
+				8B10CD901FBEFA1F000C0009 /* FacilityCollectionViewCell.m in Sources */,
 				8B10CD751FBE777C000C0009 /* GetTrainsHandler.m in Sources */,
 				8B10CD381FBE6571000C0009 /* Facility.m in Sources */,
 				8B10CD2E1FBE538B000C0009 /* StationsFeedTableViewCell.m in Sources */,
 				8B10CD601FBE688C000C0009 /* FormTextInputCell.m in Sources */,
 				8B10CD291FBE3EB1000C0009 /* LocationHandler.m in Sources */,
-				8B10CD721FBE72C9000C0009 /* NextTrainsTableViewCell.m in Sources */,
+				8B10CD721FBE72C9000C0009 /* NextTrainsFormTableViewCell.m in Sources */,
 				8B10CD6B1FBE69B2000C0009 /* CoreStationInfoFormTableViewCell.m in Sources */,
 				8B10CD221FBE1403000C0009 /* TubeStation.m in Sources */,
 				8B10CD1F1FBDF5CD000C0009 /* GetStationsHandler.m in Sources */,
 				8B10CCCA1FBDF174000C0009 /* ViewController.m in Sources */,
+				8B10CD881FBEE84E000C0009 /* StationFacilitiesFormTableViewCell.m in Sources */,
 				8B10CD6E1FBE6B22000C0009 /* StationDetailViewController.m in Sources */,
+				8B10CD801FBECD5E000C0009 /* TrainTableViewCell.m in Sources */,
+				8B10CD941FBF107D000C0009 /* StationFacilityDetailViewController.m in Sources */,
 				8B10CD481FBE678F000C0009 /* FormCellFactory.m in Sources */,
 				8B10CD321FBE63BF000C0009 /* CoreStationInfoView.m in Sources */,
 				8B10CCD51FBDF174000C0009 /* main.m in Sources */,

@@ -11,7 +11,7 @@
 #import "CoreStationInfoView.h"
 
 NSString * const kStationsFeedTableViewCellID           = @"StationsFeedTableViewCellId";
-NSString * const kStationsFeedTableViewCellCellNibName  = @"StationsFeedTableViewCellNibName";
+NSString * const kStationsFeedTableViewCellCellNibName  = @"StationsFeedTableViewCell";
 
 @interface StationsFeedTableViewCell ()
 

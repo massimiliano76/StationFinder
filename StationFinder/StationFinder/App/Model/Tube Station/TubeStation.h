@@ -14,7 +14,7 @@
 
 @property (nonatomic, readwrite) NSString *name;
 
-@property (nonatomic, readwrite) NSString *staionNaptanId;
+@property (nonatomic, readwrite) NSString *stationId;
 
 @property (nonatomic, readwrite) NSMutableArray *facilities;
 

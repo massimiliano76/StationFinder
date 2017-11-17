@@ -33,7 +33,7 @@
 {
     self.distance       = [stationDictionary[@"distance"] integerValue];
     
-    self.staionNaptanId = stationDictionary[@"naptanId"];
+    self.stationId      = stationDictionary[@"naptanId"];
     
     self.name           = stationDictionary[@"commonName"];
 }

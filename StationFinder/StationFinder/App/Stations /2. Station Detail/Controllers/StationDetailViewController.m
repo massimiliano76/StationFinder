@@ -10,13 +10,17 @@
 
 #import "FormCellFactory.h"
 
-@interface StationDetailViewController ()
+#import "StationFacilityDetailViewController.h"
+
+@interface StationDetailViewController () <StationFacilitiesFormTableViewCellDelegate>
 
 @property (nonatomic, strong) FormCellFactory *cellFactory;
 
 @property (nonatomic, strong) CoreStationInfoFormTableViewCell *coreStationInfoFormTableViewCell;
 
-@property (nonatomic, strong) NextTrainsTableViewCell *nextTrainsTableViewCell;
+@property (nonatomic, strong) NextTrainsFormTableViewCell *nextTrainsFormTableViewCell;
+
+@property (nonatomic, strong) StationFacilitiesFormTableViewCell *stationFacilitiesFormTableViewCell;
 
 @end
 
@@ -124,11 +128,20 @@
 {
     self.coreStationInfoFormTableViewCell   = [self.cellFactory coreStationInfoFormTableViewCell];
     
-    self.nextTrainsTableViewCell            = [self.cellFactory nextTrainsTableViewCell];
+    self.stationFacilitiesFormTableViewCell = [self.cellFactory stationFacilitiesFormTableViewCell];
     
-    [self conifgureCellsWithStation:self.station];
+    self.nextTrainsFormTableViewCell        = [self.cellFactory nextTrainsFormTableViewCell];
+    
+    [self setupCellDelegates];
+    
+    [self configureCellsWithStation:self.station];
     
     self.formCells = @[[self createFormCellArray]];
+}
+
+- (void)setupCellDelegates
+{
+    self.stationFacilitiesFormTableViewCell.delegate = self;
 }
 
 - (NSArray*)createFormCellArray
@@ -137,27 +150,50 @@
 
     [cells addObject:self.coreStationInfoFormTableViewCell];
     
-    [cells addObject:self.nextTrainsTableViewCell];
+    [cells addObject:self.stationFacilitiesFormTableViewCell];
+    
+    [cells addObject:self.nextTrainsFormTableViewCell];
     
     return cells;
 }
 
-- (void)conifgureCellsWithStation:(TubeStation*)tubeStation
+- (void)configureCellsWithStation:(TubeStation*)tubeStation
 {
     if (tubeStation) {
         
         [self.coreStationInfoFormTableViewCell configureWithStation:tubeStation];
+        
+        [self.stationFacilitiesFormTableViewCell configureWithStation:tubeStation];
+        
+        [self.nextTrainsFormTableViewCell configureWithStation:tubeStation];
     }
 }
 
-/*
+#pragma mark - Station Facility Cell Delegate
+
+- (void)sendSelectedFaciltyToCaller:(StationFacilitiesFormTableViewCell*)handler
+                           facility:(Facility*)facility
+{
+    if (facility) {
+        
+        [self goAndViewFacilityInDetail:facility];
+    }
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)goAndViewFacilityInDetail:(Facility*)facility
+{
+    StationFacilityDetailViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"StationFacilityDetailViewController"];
+    
+    vc.facility = facility;
+    
+    [self pushViewController:vc isAnimated:YES];
 }
-*/
+
+- (void)pushViewController:(id)controller isAnimated:(BOOL)isAnimated
+{
+    [self.navigationController pushViewController:controller animated:isAnimated];
+}
 
 @end

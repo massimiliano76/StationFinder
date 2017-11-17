@@ -12,7 +12,7 @@
 
 @property (nonatomic, readwrite) NSString *value;
 
-@property (nonatomic, readwrite) NSString *key;
+@property (nonatomic, readwrite) NSString *name;
 
 @property (nonatomic, readwrite) NSString *category;
 

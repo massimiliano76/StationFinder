@@ -8,23 +8,30 @@
 
 #import <Foundation/Foundation.h>
 
+/** Core Cells **/
 #import "FormTextInputCell.h"
 #import "CardFormTextInputCell.h"
 
+/** Station Detail Cells **/
 #import "CoreStationInfoFormTableViewCell.h"
-#import "NextTrainsTableViewCell.h"
+#import "NextTrainsFormTableViewCell.h"
+#import "StationFacilitiesFormTableViewCell.h"
 
 @interface FormCellFactory : NSObject
 
 @property (nonatomic, weak) id <UITextFieldDelegate> delegate;
 
-#pragma mark - Basic Text Input Cells
+#pragma mark - Core Cells
 
 - (CardFormTextInputCell*)cardFormTextInputCell;
 
+#pragma mark - Station Detail Cells
+
 - (CoreStationInfoFormTableViewCell*)coreStationInfoFormTableViewCell;
 
-- (NextTrainsTableViewCell*)nextTrainsTableViewCell;
+- (NextTrainsFormTableViewCell*)nextTrainsFormTableViewCell;
+
+- (StationFacilitiesFormTableViewCell*)stationFacilitiesFormTableViewCell;
 
 @end
 

@@ -85,7 +85,7 @@
     }];
 }
 
-#pragma mark - Configure View
+#pragma mark - Configure View With Data
 
 - (void)configureWithStation:(TubeStation*)station
 {
