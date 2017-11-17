@@ -90,11 +90,11 @@ NSString * const kStationsFeedTableViewCellCellNibName  = @"StationsFeedTableVie
     
     self.stationName.text = @"Station Name";
     
-    self.stationName.font = font(kAppFontRegular, 14);
+    self.stationName.font = font(kAppFontMedium, 14);
     
     self.stationName.textAlignment = NSTextAlignmentLeft;
     
-    self.stationName.numberOfLines = 1;
+    self.stationName.numberOfLines = 2;
     
     self.stationName.minimumScaleFactor = 0.5;
     

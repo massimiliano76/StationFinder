@@ -89,7 +89,7 @@
 {
     if (!isReloading) {
      
-        isReloading = YES;
+        [self configureViewForReloadingState:YES];
         
         if ([CLLocationManager locationServicesEnabled]){
             
@@ -132,10 +132,10 @@
                          stations:(NSMutableArray*)stations
 {
     self.stations = stations;
-    
+ 
     [self.tableView reloadData];
-    
-    isReloading = NO;
+ 
+    [self configureViewForReloadingState:NO];
 }
 
 - (void)returnErrorFromStationsFromHandler:(GetStationsHandler*)handler
@@ -151,6 +151,34 @@
     [self setupNavigationBarAppearance];
     
     [self setupTableView];
+}
+
+- (void)configureViewForReloadingState:(BOOL)reloading
+{
+    isReloading = reloading;
+    
+    if (reloading) {
+    
+        [self.refreshControl beginRefreshing];
+        
+    }else{
+        
+        [self.refreshControl endRefreshing];
+    }
+    
+    [self showHideHudWithShowState:reloading];
+}
+
+- (void)showHideHudWithShowState:(BOOL)show
+{
+    if (show) {
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+    }else{
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }
 }
 
 #pragma mark - Navigation Bar Appearance
@@ -197,9 +225,9 @@
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
-    [self.tableView setContentInset:UIEdgeInsetsMake(25,0,0,0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(15,0,0,0)];
     
-    //[self setupPullToRefresh];
+    [self setupPullToRefresh];
 }
 
 - (void)setupPullToRefresh
@@ -265,8 +293,6 @@
         feedCell = [[StationsFeedTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                     reuseIdentifier:kStationsFeedTableViewCellID];
     }
-    
-    feedCell.backgroundColor = [UIColor redColor];
     
     if ([self.stations objectAtIndex:indexPath.row]) {
         
