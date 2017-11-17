@@ -48,7 +48,9 @@
         
         if ([additionalProperty[@"category"] isEqualToString:@"Facility"]) {
          
-            [self.facilities addObject:additionalProperty];
+            Facility *facility = [[Facility alloc] initWithFacilityDictionary:additionalProperty];
+            
+            [self.facilities addObject:facility];
         }
     }
 }

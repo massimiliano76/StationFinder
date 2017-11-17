@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,6 +37,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghN-tp-OpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="474" y="768"/>
+        </scene>
+        <!--Station Detail View Controller-->
+        <scene sceneID="lOe-PP-ztB">
+            <objects>
+                <viewController storyboardIdentifier="StationDetailViewController" id="1Sa-VV-KPH" customClass="StationDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tr7-Wz-WSW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="aX8-IF-ecF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjw-95-7RA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479" y="768"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5v9-PD-igk">

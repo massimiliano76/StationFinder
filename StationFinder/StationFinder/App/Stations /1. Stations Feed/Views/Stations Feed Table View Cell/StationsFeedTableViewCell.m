@@ -8,8 +8,16 @@
 
 #import "StationsFeedTableViewCell.h"
 
+#import "CoreStationInfoView.h"
+
 NSString * const kStationsFeedTableViewCellID           = @"StationsFeedTableViewCellId";
 NSString * const kStationsFeedTableViewCellCellNibName  = @"StationsFeedTableViewCellNibName";
+
+@interface StationsFeedTableViewCell ()
+
+@property (nonatomic, strong) CoreStationInfoView *coreStationInfoView;
+
+@end
 
 @implementation StationsFeedTableViewCell
 
@@ -53,86 +61,20 @@ NSString * const kStationsFeedTableViewCellCellNibName  = @"StationsFeedTableVie
 
 - (void)setupSubviews
 {
-    [self setupContainerView];
-    
-    [self setupStationNameLabel];
-    
-    [self setupDistanceLabel];
+    [self setupCoreStationInfoView];
 }
 
-- (void)setupContainerView
+- (void)setupCoreStationInfoView
 {
-    self.containerView = UIView.new;
+    self.coreStationInfoView = [[CoreStationInfoView alloc] initWithFrame:self.frame];
     
-    self.containerView.backgroundColor = kAppWhite;
+    [self addSubview:self.coreStationInfoView];
     
-    self.containerView.clipsToBounds = YES;
-    
-    self.containerView.layer.masksToBounds = YES;
-    
-    self.containerView.layer.cornerRadius = 4.0f;
-    
-    [self addSubview:self.containerView];
-    
-    [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset(0);
-        make.left.equalTo(self.mas_left).offset(GenericDistance);
-        make.right.equalTo(self.mas_right).offset(-GenericDistance);
-        make.bottom.equalTo(self.mas_bottom).offset(-GenericDistance);
-    }];
-}
-
-- (void)setupStationNameLabel
-{
-    self.stationName = UILabel.new;
-
-    self.stationName.textColor = kAppDarkGray;
-    
-    self.stationName.text = @"Station Name";
-    
-    self.stationName.font = font(kAppFontMedium, 14);
-    
-    self.stationName.textAlignment = NSTextAlignmentLeft;
-    
-    self.stationName.numberOfLines = 2;
-    
-    self.stationName.minimumScaleFactor = 0.5;
-    
-    self.stationName.adjustsFontSizeToFitWidth = YES;
-    
-    [self addSubview:self.stationName];
-    
-    [self.stationName mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.containerView.mas_centerY);
-        make.left.equalTo(self.containerView.mas_left).offset(GenericDistance);
-        make.right.equalTo(self.containerView.mas_centerX);
-    }];
-}
-
-- (void)setupDistanceLabel
-{
-    self.distance = UILabel.new;
-    
-    self.distance.textColor = kAppDarkGray;
-    
-    self.distance.text = @"0 meters away";
-    
-    self.distance.font = font(kAppFontRegular, 12);
-    
-    self.distance.textAlignment = NSTextAlignmentRight;
-    
-    self.distance.numberOfLines = 1;
-    
-    self.distance.minimumScaleFactor = 0.5;
-    
-    self.distance.adjustsFontSizeToFitWidth = YES;
-    
-    [self addSubview:self.distance];
-    
-    [self.distance mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.stationName.mas_centerY);
-        make.right.equalTo(self.containerView.mas_right).offset(-GenericDistance);
-        make.left.equalTo(self.stationName.mas_centerX).offset(GenericDistance);
+    [self.coreStationInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_top);
+        make.left.equalTo(self.mas_left);
+        make.right.equalTo(self.mas_right);
+        make.bottom.equalTo(self.mas_bottom);
     }];
 }
 
@@ -140,11 +82,9 @@ NSString * const kStationsFeedTableViewCellCellNibName  = @"StationsFeedTableVie
 
 - (void)configureWithStation:(TubeStation*)station
 {
-    if (station) {
+    if (station && self.coreStationInfoView) {
         
-        self.stationName.text   = station.name;
-        
-        self.distance.text      = [NSString stringWithFormat:@"%d meters away", (int)station.distance];
+        [self.coreStationInfoView configureWithStation:station];
     }
 }
 

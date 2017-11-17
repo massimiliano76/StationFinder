@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StationFinder/App/Stations /1. Stations Feed/Models/Location Handler/LocationHandler.m"
-            timestampString = "532570874.845872"
+            timestampString = "532576346.89304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StationFinder/App/Stations /1. Stations Feed/Models/Location Handler/LocationHandler.m"
-            timestampString = "532570874.846795"
+            timestampString = "532576346.894168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StationFinder/App/Stations /1. Stations Feed/Models/Location Handler/LocationHandler.m"
-            timestampString = "532570874.847221"
+            timestampString = "532576346.89471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StationFinder/App/Stations /1. Stations Feed/Models/Location Handler/LocationHandler.m"
-            timestampString = "532570874.847654"
+            timestampString = "532576346.895352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StationFinder/App/Stations /1. Stations Feed/Models/Location Handler/LocationHandler.m"
-            timestampString = "532570874.847991"
+            timestampString = "532576346.895934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StationFinder/App/Stations /1. Stations Feed/Controllers/StationsFeedTableViewController.m"
-            timestampString = "532570874.848279"
+            timestampString = "532576346.896422"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "-returnStationsFromHandler:stations:"
             landmarkType = "7">
          </BreakpointContent>
@@ -116,12 +116,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StationFinder/App/Stations /1. Stations Feed/Controllers/StationsFeedTableViewController.m"
-            timestampString = "532570874.848658"
+            timestampString = "532576346.896585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-collectDataForView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StationFinder/App/Stations /1. Stations Feed/Controllers/StationsFeedTableViewController.m"
+            timestampString = "532576346.897101"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StationFinder/App/Views/Forms/Cells/Core Station Info Form Cell/CoreStationInfoFormTableViewCell.m"
+            timestampString = "532576346.897201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-setupCoreStationInfoView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StationFinder/App/Views/Forms/Cells/Core Station Info Form Cell/CoreStationInfoFormTableViewCell.m"
+            timestampString = "532576346.897688"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-configureWithStation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StationFinder/App/Stations /1. Stations Feed/Models/Get Stations Handler/GetStationsHandler.m"
+            timestampString = "532576346.897805"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-getNearbyTubeStationsWithLocationInfo:latitude:longitude:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

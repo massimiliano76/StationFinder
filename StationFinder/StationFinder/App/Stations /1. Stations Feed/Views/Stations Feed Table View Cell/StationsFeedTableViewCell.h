@@ -15,12 +15,6 @@ extern NSString * const kStationsFeedTableViewCellCellNibName;
 
 #pragma mark - Variables
 
-@property (nonatomic, strong) UIView *containerView;
-
-@property (nonatomic, strong) UILabel *stationName;
-
-@property (nonatomic, strong) UILabel *distance;
-
 #pragma mark - Methods
 
 - (void)configureWithStation:(TubeStation*)station;
