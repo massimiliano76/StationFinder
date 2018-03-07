@@ -20,9 +20,10 @@ NSString * const kTrainTableViewCellNibName    = @"TrainTableViewCellNibName";
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    if (!self) return nil;
-    
-    [self setupView];
+    if (self){
+        
+        [self setupView];
+    }
     
     return self;
 }

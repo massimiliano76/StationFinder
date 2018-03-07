@@ -28,9 +28,10 @@ NSString * const kStationsFeedTableViewCellCellNibName  = @"StationsFeedTableVie
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    if (!self) return nil;
-    
-    [self setupView];
+    if (self){
+      
+        [self setupView];
+    }
     
     return self;
 }

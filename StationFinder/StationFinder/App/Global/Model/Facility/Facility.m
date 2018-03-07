@@ -14,9 +14,7 @@
 
 - (instancetype)initWithFacilityDictionary:(NSDictionary *)facilityDictionary
 {
-    self = [super init];
-    
-    if (self)
+    if (self = [super init])
     {
         if (facilityDictionary.allKeys.count > 0) {
             

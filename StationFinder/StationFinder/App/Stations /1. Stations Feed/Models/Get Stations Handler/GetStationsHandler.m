@@ -23,6 +23,8 @@
  api documentation: https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/StopPoint/StopPoint_GetByGeoPoint
  search api call: "Gets a list of StopPoints within {radius} by the specified criteria"
  
+ Try https://www.getpostman.com to test and run api calls outside of the app
+ 
  @param radius area that the stations must be in given the longitude and latitide
  @param latitude users location latitude
  @param longitude users location longitude

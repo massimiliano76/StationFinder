@@ -17,11 +17,12 @@ NSString * const kFacilityCollectionViewCellNibName = @"FacilityCollectionViewCe
 {
     self = [super initWithFrame:frame];
     
-    if (self)
+    if (self){
         
         [self setupMainView];
-    
+        
         [self initializeSubviews];
+    }
     
     return self;
 }

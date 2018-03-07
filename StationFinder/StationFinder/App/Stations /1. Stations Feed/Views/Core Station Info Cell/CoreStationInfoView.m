@@ -16,9 +16,10 @@
 {
     self = [super initWithFrame:frame];
     
-    if (self)
-        
+    if (self){
+     
         [self setupView];
+    }
     
     return self;
 }

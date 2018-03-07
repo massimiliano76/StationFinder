@@ -14,9 +14,7 @@
 
 - (instancetype)initWithTrainDictionary:(NSDictionary *)trainDictionary
 {
-    self = [super init];
-    
-    if (self)
+    if (self = [super init])
     {
         if (trainDictionary.allKeys.count > 0) {
             

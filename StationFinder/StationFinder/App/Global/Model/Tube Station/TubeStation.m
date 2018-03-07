@@ -14,9 +14,7 @@
 
 - (instancetype)initWithStationDictionary:(NSDictionary *)stationDictionary
 {
-    self = [super init];
-    
-    if (self)
+    if (self = [super init])
     {
         if (stationDictionary.allKeys.count > 0) {
          

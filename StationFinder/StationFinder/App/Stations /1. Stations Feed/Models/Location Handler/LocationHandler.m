@@ -127,7 +127,8 @@
              
              NSLog(@"City Name: %@", placemark.locality);
              
-             if ([placemark.locality isEqualToString:@"London"] && [placemark.ISOcountryCode isEqualToString:@"GB"]) {
+             if ([placemark.locality isEqualToString:@"London"] &&
+                 [placemark.ISOcountryCode isEqualToString:@"GB"]) {
                  
                  [self sendBackLocation:currentLocation];
              

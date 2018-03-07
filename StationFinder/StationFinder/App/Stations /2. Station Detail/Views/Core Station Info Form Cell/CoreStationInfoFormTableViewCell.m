@@ -25,13 +25,14 @@
 {
     self = [super init];
     
-    if (!self) return nil;
-    
-    [self setupVariables];
-    
-    [self setupMainView];
-    
-    [self initializeSubviews];
+    if (self){
+        
+        [self setupVariables];
+        
+        [self setupMainView];
+        
+        [self initializeSubviews];
+    }
     
     return self;
 }
